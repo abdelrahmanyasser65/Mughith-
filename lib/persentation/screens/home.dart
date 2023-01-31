@@ -5,22 +5,70 @@ import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
 import 'package:mughith/persentation/widget/home/home_card.dart';
 
+import '../../app/controllers/home_controller.dart';
 import '../widget/home/category_card.dart';
 import '../widget/home/search_bar.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
 
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
+class HomeScreen extends StatelessWidget {
+  HomeScreen({super.key});
+  final HomeController controller = Get.put(HomeController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Drawer(
-        backgroundColor: ColorManager.secondPrimary,
+          backgroundColor: ColorManager.secondPrimary,
+          child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            child: Column(
+              children: [
+                Container(
+                  padding: EdgeInsets.only(top: 30),
+                  height: 250,
+                  color: ColorManager.primary,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 100,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle ,
+                            image:DecorationImage(
+                              image: AssetImage('assets/images/man.jpg'),
+                            )
+                        ),
+                      ) ,
+                      Text('Mostafa Samir',style: TextStyle(
+                        fontSize: FontSized.s18,
+                        color: ColorManager.white,
+                      ),),
+                      Text('mostafasamir@gmail.com',style: TextStyle(
+                        color: ColorManager.white,
+                      ),),
+                    ],
+                  ),
+                ) ,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal:10),
+                  child: ListView.builder(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, index) => GestureDetector(
+                      onTap: (){
+                        // Get.to(controller.goToScreen[index]);
+                      },
+                      child: ListTile(
+                        leading: Icon(controller.drawerIcons[index]),
+                        title: Text(controller.drawerString[index]),
+                      ),
+                    ),
+                    itemCount: controller.drawerString.length,
+                  ),
+                ),
+
+              ],
+            ),
+          )
       ),
       appBar: AppBar(
         iconTheme: IconThemeData(
@@ -139,7 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemCount: 3,
-              itemBuilder: (contex, index) {
+              itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Column(
