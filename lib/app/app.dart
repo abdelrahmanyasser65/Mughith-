@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
-import '../persentation/screens/test_screen.dart';
+import '../persentation/screens/intro/select_language.dart';
 import 'localization/languages.dart';
 
 class MyApp extends StatelessWidget {
@@ -16,8 +16,7 @@ class MyApp extends StatelessWidget {
         translations: Languages(),
         locale: const Locale('ar', 'EG'),
         theme: ThemeData(fontFamily: "Cairo"),
-        home: const TestScreen(),
-
+        home: const SelectLanguageScreen(),
       );
     });
   }
