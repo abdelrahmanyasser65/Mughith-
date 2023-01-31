@@ -2,11 +2,18 @@
 import 'package:sizer/sizer.dart';
 
 class HeightSized{
+  static double h1=1.h;
+  static double h2=2.h;
   static double h4=4.h;
+  static double h6=6.h;
   static double h8=8.h;
   static double h12=12.h;
   static double h16=16.h;
   static double h20=20.h;
+  static double h70=70.h;
+  static double h78=78.h;
+  static double h80=80.h;
+  static double h100=100.h;
 }
 class WidthSized{
   static double w4=4.w;
