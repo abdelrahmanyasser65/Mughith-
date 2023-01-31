@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mughith/persentation/screens/auth/login_screen.dart';
+import 'package:mughith/persentation/widget/navigator.dart';
 import 'package:sizer/sizer.dart';
 
-import '../widgets/custom_dialog.dart';
+import '../widget/custom_dialog.dart';
 
 class TestScreen extends StatelessWidget {
   const TestScreen({super.key});
@@ -12,9 +14,14 @@ class TestScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Center(
-          child: Text(
-            "  Welcome Back 👋".tr,
-            style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold),
+          child: InkWell(
+            onTap: (){
+              Navigators.navigateTo(context, LoginScreen());
+            },
+            child: Text(
+              "  Welcome Back 👋".tr,
+              style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold),
+            ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
