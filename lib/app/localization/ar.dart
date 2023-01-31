@@ -6,7 +6,7 @@ class Ar {
     "Email": "البريد الالكتروني",
     "password": "كلمه السر",
     "SIGN IN": "تسجيل دخول",
-    "Already have an account?": "هل لديك حساب بالفعل",
+    "Already have an account?": "هل لديك حساب بالفعل؟",
     "Sign in": "تسجيل الدخول",
     "Getting Started": "هيا نبدأ",
     "Create an account to continue!": "قم بانشاء حساب للستمرار",
