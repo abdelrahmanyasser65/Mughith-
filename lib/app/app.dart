@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mughith/persentation/screens/auth/splash_screen.dart';
 import 'package:sizer/sizer.dart';
 
 import '../persentation/screens/intro/select_language.dart';
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
         translations: Languages(),
         locale: const Locale('ar', 'EG'),
         theme: ThemeData(fontFamily: "Cairo"),
-        home: const SplashScreen(),
+        home: const SelectLanguageScreen(),
       );
     });
   }
