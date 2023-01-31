@@ -12,5 +12,13 @@ class Ar {
     "Create an account to continue!": "قم بانشاء حساب للستمرار",
     "Full Name": "الاسم بالكامل",
     "SIGN UP": "انشاء حساب",
+    "Search here": "ابحث هنا",
+    "Featured": "متميز",
+    "See more": "عرض المزيد",
+    "Study": "تعليم",
+    "Medic": "علاج",
+    "Human": "إنساني",
+    "Other": "اخرى",
+    "Help Them Smile Again": "ساعدهم على الابتسام مرة أخرى",
   };
 }

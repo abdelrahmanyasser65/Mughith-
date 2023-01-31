@@ -12,5 +12,13 @@ class En {
     "Create an account to continue!": "Create an account to continue!",
     "Full Name": "Full Name",
     "SIGN UP": "SIGN UP",
+    "Search here": "Search here",
+    "Featured": "Featured",
+    "See more": "See more",
+    "Study": "Study",
+    "Medic": "Medic",
+    "Human": "Human",
+    "Other": "Other",
+    "Help Them Smile Again": "Help Them Smile Again",
   };
 }
