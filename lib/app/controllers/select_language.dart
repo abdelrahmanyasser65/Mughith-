@@ -17,7 +17,7 @@ class SelectLanguageController extends GetxController {
         Get.updateLocale(const Locale('ar', 'EG'));
       }
 
-      Get.to(const HomeScreen());
+      Get.to( HomeScreen());
     } catch (e) {
       print(e.toString());
     }

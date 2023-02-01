@@ -20,5 +20,12 @@ class En {
     "Human": "Human",
     "Other": "Other",
     "Help Them Smile Again": "Help Them Smile Again",
+
+
+    //drawer
+    "Profile":"Profile",
+    "notifications":"notifications",
+    "Language":"Language" ,
+    "Logout":"Logout",
   };
 }

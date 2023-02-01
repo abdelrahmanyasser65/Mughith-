@@ -20,5 +20,11 @@ class Ar {
     "Human": "إنساني",
     "Other": "اخرى",
     "Help Them Smile Again": "ساعدهم على الابتسام مرة أخرى",
+
+    //drawer
+    "Profile":"الحساب الشخصي",
+    "notifications":"الاشعارات",
+    "Language":"تغيير اللغة",
+    "Logout":"تسجيل خروج" ,
   };
 }
