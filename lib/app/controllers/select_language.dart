@@ -3,8 +3,10 @@ import 'package:get/get.dart';
 import 'package:mughith/app/utils/language_options.dart';
 import 'package:mughith/app/utils/shared_keys.dart';
 import 'package:mughith/app/utils/sharedpreferences.dart';
+import 'package:mughith/persentation/screens/auth/login_screen.dart';
 // import 'package:mughith/persentation/screens/auth/login_screen.dart';
 import 'package:mughith/persentation/screens/home.dart';
+import 'package:mughith/persentation/screens/onBoarding/onboarding.dart';
 
 class SelectLanguageController extends GetxController {
   setLanguage(LanguageOptions language) async {
@@ -17,7 +19,7 @@ class SelectLanguageController extends GetxController {
         Get.updateLocale(const Locale('ar', 'EG'));
       }
 
-      Get.to( HomeScreen());
+      Get.to( OnBoardingScreen());
     } catch (e) {
       print(e.toString());
     }
