@@ -4,6 +4,7 @@ import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
 import 'package:mughith/persentation/screens/auth/sign_screen.dart';
+import 'package:mughith/persentation/screens/home.dart';
 import 'package:mughith/persentation/widget/auth/center_side_text.dart';
 import 'package:mughith/persentation/widget/auth/default_button.dart';
 import 'package:mughith/persentation/widget/auth/default_text_formfiled.dart';
@@ -30,7 +31,7 @@ class LoginScreen extends StatelessWidget {
             },
           ),
           Container(
-            height: HeightSized.h78,
+            height: HeightSized.h80,
             width: double.infinity,
             padding: EdgeInsets.only(
                 left: WidthSized.w8, right: WidthSized.w8, top: HeightSized.h8),
@@ -81,7 +82,12 @@ class LoginScreen extends StatelessWidget {
                     obscureText: true,
                     prefixIcon: Icons.lock),
                 SizedBox(height: HeightSized.h4),
-                DefaultButton(text: "Sign in".tr, onPressed: () {})
+                DefaultButton(
+                  text: "Sign in".tr,
+                  onPressed: () {
+                    Get.offAll(HomeScreen());
+                  },
+                ),
               ],
             ),
           ),

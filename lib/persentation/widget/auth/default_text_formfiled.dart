@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mughith/app/constants.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
-import 'package:sizer/sizer.dart';
 class DefaultTextFormFiled extends StatelessWidget {
   const DefaultTextFormFiled({Key? key, required this.controller, required this.textInputType, required this.obscureText, required this.prefixIcon}) : super(key: key);
 final TextEditingController controller;

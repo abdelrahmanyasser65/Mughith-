@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
-import 'package:mughith/persentation/screens/intro/select_language.dart';
 import 'package:sizer/sizer.dart';
 
+import '../persentation/screens/auth/splash_screen.dart';
 import 'localization/languages.dart';
 
 class MyApp extends StatelessWidget {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           fontFamily: "Cairo",
           scaffoldBackgroundColor: ColorManager.secondPrimary,
         ),
-        home: const SelectLanguageScreen(),
+        home: const SplashScreen(),
       );
     });
   }
