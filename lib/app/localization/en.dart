@@ -21,11 +21,15 @@ class En {
     "Other": "Other",
     "Help Them Smile Again": "Help Them Smile Again",
 
-
     //drawer
-    "Profile":"Profile",
-    "notifications":"notifications",
-    "Language":"Language" ,
-    "Logout":"Logout",
+    "Profile": "Profile",
+    "notifications": "notifications",
+    "Language": "Language",
+    "Logout": "Logout",
+
+    // Details
+    "Details": "Details",
+    "Days left": "Days left",
+    "Donate Now": "Donate Now",
   };
 }

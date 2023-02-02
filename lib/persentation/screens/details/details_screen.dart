@@ -9,6 +9,7 @@ import 'package:mughith/persentation/widget/auth/center_side_text.dart';
 import 'package:mughith/persentation/widget/auth/default_button.dart';
 import 'package:mughith/persentation/widget/default_text.dart';
 import 'package:mughith/persentation/widget/navigator.dart';
+
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({Key? key}) : super(key: key);
 
@@ -16,34 +17,41 @@ class DetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorManager.secondPrimary,
-      body:Padding(
-      padding:  EdgeInsets.only(
-            left: WidthSized.w8,
-            right: WidthSized.w8,
-            top: HeightSized.h8
+      body: Padding(
+        padding: EdgeInsets.only(
+          left: WidthSized.w8,
+          right: WidthSized.w8,
+          top: HeightSized.h8,
         ),
         child: Column(
-         crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
                 Container(
                   decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: ColorManager.white
+                      shape: BoxShape.circle, color: ColorManager.white),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.arrow_back_outlined,
+                      color: ColorManager.iconColor,
+                    ),
                   ),
-                  child: IconButton(onPressed: (){},
-                      icon: Icon(Icons.arrow_back_outlined,
-                        color: ColorManager.iconColor,)),
                 ),
-                SizedBox(width: WidthSized.w20,),
+                SizedBox(
+                  width: WidthSized.w20,
+                ),
                 CenterSideText(
-                    text: "Details",
-                    fontS:  FontSized.s18,
-                    fontW:  FontWeightManager.semiBold,)
+                  text: "Details".tr,
+                  fontS: FontSized.s18,
+                  fontW: FontWeightManager.semiBold,
+                )
               ],
             ),
-            SizedBox(height: HeightSized.h4,),
+            SizedBox(
+              height: HeightSized.h4,
+            ),
             Stack(
               alignment: Alignment.bottomRight,
               children: [
@@ -52,19 +60,21 @@ class DetailsScreen extends StatelessWidget {
                   child: Image.asset(detailsImages[0]),
                 ),
                 Container(
-                 margin: EdgeInsets.only(
-                   bottom: HeightSized.h2,
-                   right: WidthSized.w4
-                 ),
+                  margin: EdgeInsets.only(
+                      bottom: HeightSized.h2, right: WidthSized.w4),
                   decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: ColorManager.black.withOpacity(0.5)
+                    shape: BoxShape.circle,
+                    color: ColorManager.black.withOpacity(0.5),
                   ),
-                  child: IconButton(onPressed: (){
-                    Navigators.navigateTo(context,const ImagesScreen());
-                  },
-                      icon: Icon(Icons.add_photo_alternate_outlined,
-                        color: ColorManager.white,)),
+                  child: IconButton(
+                    onPressed: () {
+                      Navigators.navigateTo(context, const ImagesScreen());
+                    },
+                    icon: Icon(
+                      Icons.add_photo_alternate_outlined,
+                      color: ColorManager.white,
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -83,23 +93,30 @@ class DetailsScreen extends StatelessWidget {
                   children: [
                     Text(
                       "Target: ",
-                      style: TextStyle(fontWeight: FontWeightManager.bold,
-                          color: ColorManager.iconColor),
+                      style: TextStyle(
+                        fontWeight: FontWeightManager.bold,
+                        color: ColorManager.iconColor,
+                      ),
                     ),
                     Text(
                       "70,000",
-                      style: TextStyle(color: ColorManager.textColor2,fontWeight: FontWeightManager.semiBold),
+                      style: TextStyle(
+                        color: ColorManager.textColor2,
+                        fontWeight: FontWeightManager.semiBold,
+                      ),
                     ),
                   ],
                 ),
-                 Text(
-                  "2 Days left",
-                  style: TextStyle(fontWeight: FontWeightManager.bold,
-                  color: ColorManager.primary),
+                Text(
+                  "2 ${"Days left".tr}",
+                  style: TextStyle(
+                    fontWeight: FontWeightManager.bold,
+                    color: ColorManager.primary,
+                  ),
                 )
               ],
             ),
-             SizedBox(height: HeightSized.h4),
+            SizedBox(height: HeightSized.h4),
             LinearProgressIndicator(
               value: 0.8,
               color: ColorManager.primary,
@@ -121,30 +138,34 @@ class DetailsScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                 Text(
+                Text(
                   "82%",
                   style: TextStyle(
                       fontSize: FontSized.s14,
                       fontWeight: FontWeightManager.bold,
-                  color: ColorManager.primary),
-                )
+                      color: ColorManager.primary),
+                ),
               ],
             ),
             SizedBox(height: HeightSized.h2),
             SizedBox(
-              height:HeightSized.h20 ,
+              height: HeightSized.h20,
               child: SingleChildScrollView(
                 child: DefaultText(
-                    text: "As soon as you complete our donation, we will start its journey. First your money will be "
-                        "turned into food, and then sent to one of the over 120 countries where people are most vulnerable. Every single day.",
-                    color: ColorManager.textColor2,
-                    fontSize: FontSized.s12,
-                    fontWeight: FontWeightManager.regular,textAlign: TextAlign.left,),
+                  text:
+                      "As soon as you complete our donation, we will start its journey. First your money will be "
+                      "turned into food, and then sent to one of the over 120 countries where people are most vulnerable. Every single day.",
+                  color: ColorManager.textColor2,
+                  fontSize: FontSized.s12,
+                  fontWeight: FontWeightManager.regular,
+                  textAlign: TextAlign.left,
+                ),
               ),
             ),
-            SizedBox(height: HeightSized.h6,),
-            DefaultButton(onPressed: (){},
-                text: "Donate Now")
+            SizedBox(
+              height: HeightSized.h6,
+            ),
+            DefaultButton(onPressed: () {}, text: "Donate Now".tr)
           ],
         ),
       ),

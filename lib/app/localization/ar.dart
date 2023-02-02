@@ -22,9 +22,14 @@ class Ar {
     "Help Them Smile Again": "ساعدهم على الابتسام مرة أخرى",
 
     //drawer
-    "Profile":"الحساب الشخصي",
-    "notifications":"الاشعارات",
-    "Language":"تغيير اللغة",
-    "Logout":"تسجيل خروج" ,
+    "Profile": "الحساب الشخصي",
+    "notifications": "الاشعارات",
+    "Language": "تغيير اللغة",
+    "Logout": "تسجيل خروج",
+
+    // Details
+    "Details": "التفاصيل",
+    "Days left": "ايام متبقيه",
+    "Donate Now": "تبرع الان"
   };
 }
