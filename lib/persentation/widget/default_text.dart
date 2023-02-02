@@ -15,7 +15,7 @@ final FontWeight? fontWeight;
       style: TextStyle(
         fontWeight: fontWeight,
           fontSize: fontSize,
-
+        overflow: TextOverflow.visible,
         color: color,
       ),
     );

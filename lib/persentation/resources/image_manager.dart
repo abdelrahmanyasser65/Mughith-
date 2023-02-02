@@ -10,4 +10,8 @@ class ImageAssets {
   static const onBoarding1="$imagePath/onB1.jpg";
   static const onBoarding2="$imagePath/onB2.jpg";
   static const onBoarding3="$imagePath/onB3.jpg";
+  static const details1="$imagePath/d1.jpg";
+  static const details2="$imagePath/d2.jpg";
+  static const details3="$imagePath/d3.jpg";
+  static const details4="$imagePath/d4.jpg";
 }
