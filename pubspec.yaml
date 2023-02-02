@@ -16,6 +16,8 @@ dependencies:
   sizer: ^2.0.15
   hexcolor: ^3.0.1
   shared_preferences: ^2.0.17
+  intl: ^0.18.0
+  image_picker: ^0.8.6+1
 
 dev_dependencies:
   flutter_test:

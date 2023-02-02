@@ -26,5 +26,19 @@ class Ar {
     "notifications":"الاشعارات",
     "Language":"تغيير اللغة",
     "Logout":"تسجيل خروج" ,
+
+
+    //add new state
+
+    "Add New State":"اضافة حالة جديدة",
+    "Name Of State":"اسم الحالة",
+    'mostafa samir mostafa samir':"مصطفي سمير مصطفي سمير ",
+    "National Card":"البطاقة الشخصية" ,
+    "The target Number":"الرقم المطلوب" ,
+    "i.e 2000\$":"i.e 2000\$",
+    "Last Date":"اخر موعد" ,
+    '2-2-2023':'2-2-2023',
+    "Description":"الوصف",
+    'Submit':'تاكيد',
   };
 }
