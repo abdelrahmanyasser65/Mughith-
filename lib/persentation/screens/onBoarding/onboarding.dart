@@ -5,6 +5,7 @@ import 'package:mughith/data/models/on_boarding_models.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
+import 'package:mughith/persentation/screens/auth/login_screen.dart';
 import 'package:mughith/persentation/widget/auth/default_button.dart';
 import 'package:mughith/persentation/widget/default_text.dart';
 import 'package:sizer/sizer.dart';

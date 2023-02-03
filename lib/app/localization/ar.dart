@@ -40,13 +40,5 @@ class Ar {
     '2-2-2023':'2-2-2023',
     "Description":"الوصف",
     'Submit':'تاكيد',
-
-    // category screen
-
-    "Importance": "الاهميه",
-    "Amount": "المبلغ",
-    "Apply": "تطبيق",
-    "End Date": "تاريخ الانتهاء",
-    "Filter": "تصفية"
   };
 }
