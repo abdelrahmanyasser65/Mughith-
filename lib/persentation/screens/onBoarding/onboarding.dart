@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mughith/app/controllers/intro.dart';
 import 'package:mughith/data/models/on_boarding_models.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
@@ -13,6 +14,7 @@ class OnBoardingScreen extends StatelessWidget {
   OnBoardingScreen({Key? key}) : super(key: key);
 
   final PageController controller = PageController(initialPage: 0);
+  final IntroController _introController = Get.put(IntroController());
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +64,8 @@ class OnBoardingScreen extends StatelessWidget {
                 DefaultButton(
                   color: ColorManager.primary,
                   onPressed: () {
-                    Get.to(LoginScreen());
+                    // Get.to(LoginScreen());
+                    _introController.moveToNextScreen();
                   },
                   text: 'Start Now ',
                 ),

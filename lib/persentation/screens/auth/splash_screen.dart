@@ -21,6 +21,7 @@ class _SplashScreenState extends State<SplashScreen>
     Future.delayed(
       const Duration(seconds: AppConstants.splashDelay),
       () {
+
         Get.off(const SelectLanguageScreen());
       },
     );

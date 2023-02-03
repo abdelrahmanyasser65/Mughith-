@@ -81,7 +81,10 @@ class NewStateScreen extends StatelessWidget {
           CustomTextFormFiled(
             controller: controller.descriptionController,
             textInputType: TextInputType.text,
+            maxLines: 15,
+            minLines: 1,
             ),
+
           DefaultButton(onPressed: (){
 
           },text: 'Submit'.tr,color: ColorManager.primary,)

@@ -4,7 +4,10 @@ import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
 import 'package:mughith/persentation/screens/details/details_screen.dart';
+import 'package:mughith/persentation/screens/new_state_screen.dart';
+import 'package:mughith/persentation/screens/notifaction_screen.dart';
 import 'package:mughith/persentation/widget/home/home_card.dart';
+import 'package:mughith/persentation/widget/navigator.dart';
 
 import '../../app/controllers/home_controller.dart';
 import '../widget/custom_dialog.dart';
@@ -18,6 +21,16 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Get.to(NewStateScreen());
+        },
+        backgroundColor: ColorManager.primary,
+        child: Icon(
+          Icons.add,
+          color: ColorManager.white,
+        ),
+      ),
       drawer: Drawer(
           backgroundColor: ColorManager.secondPrimary,
           child: SingleChildScrollView(
@@ -64,8 +77,11 @@ class HomeScreen extends StatelessWidget {
                     itemBuilder: (context, index) => GestureDetector(
                       onTap: () {
                         // Get.to(controller.goToScreen[index]);
+
                         if (index == 2) {
                           CustomDialog.showLocaleDialog();
+                        }else if(index == 1){
+                          Get.to(NotifactionScreen());
                         }
                       },
                       child: ListTile(
@@ -95,8 +111,11 @@ class HomeScreen extends StatelessWidget {
             child: CircleAvatar(
               backgroundColor: Colors.white,
               radius: 20,
-              child: Icon(
-                Icons.notifications,
+              child: IconButton(
+                icon:const Icon(Icons.notifications,),
+                onPressed: (){
+                  Get.to(const NotifactionScreen());
+                },
                 color: ColorManager.black,
               ),
             ),

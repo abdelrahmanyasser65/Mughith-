@@ -7,5 +7,5 @@ enum SharedKeys {
   userImage,
   userPhone,
   isDarkMode,
-  selectedLanguage
+  selectedLanguage,
 }

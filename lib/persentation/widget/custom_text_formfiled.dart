@@ -8,26 +8,29 @@ class CustomTextFormFiled extends StatelessWidget {
   const CustomTextFormFiled(
       {
         Key? key, required this.controller,
-        required this.textInputType, this.hintText, this.onTap, this.height=70,
+        required this.textInputType, this.hintText, this.onTap,
+        this.maxLines, this.minLines,
       }) : super(key: key);
   final TextEditingController controller;
   final TextInputType textInputType;
   final String? hintText ;
   final VoidCallback? onTap ;
-  final double height ;
-
+  final int?maxLines;
+  final int? minLines;
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: 10),
-      height:height,
       child: TextFormField(
         onChanged: (val){},
         onTap: onTap,
         controller:controller,
         keyboardType: textInputType,
         cursorColor: Colors.grey,
+  maxLines: maxLines,
+  minLines:minLines ,
         decoration: InputDecoration(
+
           contentPadding: const EdgeInsets.only(bottom: 10,left: 10,right: 10),
           hintText: hintText,
           suffixIcon: controller.text.isNotEmpty?
