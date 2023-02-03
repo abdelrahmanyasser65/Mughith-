@@ -81,9 +81,7 @@ class LoginScreen extends StatelessWidget {
                     obscureText: true,
                     prefixIcon: Icons.lock),
                 SizedBox(height: HeightSized.h4),
-                DefaultButton(
-                    color: ColorManager.primary,
-                    text: "Sign in".tr, onPressed: () {})
+                DefaultButton(text: "Sign in".tr, onPressed: () {})
               ],
             ),
           ),

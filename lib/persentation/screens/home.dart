@@ -3,16 +3,18 @@ import 'package:get/get.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
+import 'package:mughith/persentation/screens/details/details_screen.dart';
 import 'package:mughith/persentation/widget/home/home_card.dart';
 
 import '../../app/controllers/home_controller.dart';
+import '../widget/custom_dialog.dart';
 import '../widget/home/category_card.dart';
 import '../widget/home/search_bar.dart';
-
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
   final HomeController controller = Get.put(HomeController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +25,7 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  padding: EdgeInsets.only(top: 30),
+                  padding: const EdgeInsets.only(top: 30),
                   height: 250,
                   color: ColorManager.primary,
                   child: Column(
@@ -31,45 +33,52 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Container(
                         height: 100,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle ,
-                            image:DecorationImage(
+                        decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
                               image: AssetImage('assets/images/man.jpg'),
-                            )
+                            )),
+                      ),
+                      Text(
+                        'Mostafa Samir',
+                        style: TextStyle(
+                          fontSize: FontSized.s18,
+                          fontWeight: FontWeightManager.bold,
+                          color: ColorManager.black.withOpacity(0.7),
                         ),
-                      ) ,
-                      Text('Mostafa Samir',style: TextStyle(
-                        fontSize: FontSized.s18,
-                        color: ColorManager.white,
-                      ),),
-                      Text('mostafasamir@gmail.com',style: TextStyle(
-                        color: ColorManager.white,
-                      ),),
+                      ),
+                      Text(
+                        'mostafasamir@gmail.com',
+                        style: TextStyle(
+                          color: ColorManager.black,
+                        ),
+                      ),
                     ],
                   ),
-                ) ,
+                ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal:10),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: ListView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) => GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         // Get.to(controller.goToScreen[index]);
+                        if (index == 2) {
+                          CustomDialog.showLocaleDialog();
+                        }
                       },
                       child: ListTile(
                         leading: Icon(controller.drawerIcons[index]),
-                        title: Text(controller.drawerString[index]),
+                        title: Text(controller.drawerString[index].tr),
                       ),
                     ),
                     itemCount: controller.drawerString.length,
                   ),
                 ),
-
               ],
             ),
-          )
-      ),
+          )),
       appBar: AppBar(
         iconTheme: IconThemeData(
           color: ColorManager.black,
@@ -192,7 +201,12 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Column(
                     children: [
-                      const HomeCard(),
+                      InkWell(
+                        onTap: () {
+                          Get.to(const DetailsScreen());
+                        },
+                        child: const HomeCard(),
+                      ),
                       SizedBox(height: HeightSized.h4),
                     ],
                   ),

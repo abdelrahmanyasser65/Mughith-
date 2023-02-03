@@ -4,7 +4,6 @@ import 'package:mughith/data/models/details_model.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
-import 'package:mughith/persentation/screens/details/donation_amount_screen.dart';
 import 'package:mughith/persentation/screens/details/images_screen.dart';
 import 'package:mughith/persentation/widget/auth/center_side_text.dart';
 import 'package:mughith/persentation/widget/auth/default_button.dart';
@@ -144,10 +143,8 @@ class DetailsScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: HeightSized.h6,),
-            DefaultButton(onPressed: (){
-              Navigators.navigateTo(context,const DonationAmountScreen());
-            },
-                text: "Donate Now",color: ColorManager.primary,)
+            DefaultButton(onPressed: (){},
+                text: "Donate Now")
           ],
         ),
       ),

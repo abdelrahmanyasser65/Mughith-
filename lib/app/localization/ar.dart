@@ -6,7 +6,7 @@ class Ar {
     "Email": "البريد الالكتروني",
     "password": "كلمه السر",
     "SIGN IN": "تسجيل دخول",
-    "Already have an account?": "هل لديك حساب بالفعل؟",
+    "Already have an account?": "هل لديك حساب بالفعل",
     "Sign in": "تسجيل الدخول",
     "Getting Started": "هيا نبدأ",
     "Create an account to continue!": "قم بانشاء حساب للستمرار",
@@ -26,5 +26,19 @@ class Ar {
     "notifications":"الاشعارات",
     "Language":"تغيير اللغة",
     "Logout":"تسجيل خروج" ,
+
+
+    //add new state
+
+    "Add New State":"اضافة حالة جديدة",
+    "Name Of State":"اسم الحالة",
+    'mostafa samir mostafa samir':"مصطفي سمير مصطفي سمير ",
+    "National Card":"البطاقة الشخصية" ,
+    "The target Number":"الرقم المطلوب" ,
+    "i.e 2000\$":"i.e 2000\$",
+    "Last Date":"اخر موعد" ,
+    '2-2-2023':'2-2-2023',
+    "Description":"الوصف",
+    'Submit':'تاكيد',
   };
 }

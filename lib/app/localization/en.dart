@@ -27,5 +27,18 @@ class En {
     "notifications":"notifications",
     "Language":"Language" ,
     "Logout":"Logout",
+
+    //add new state
+
+    "Add New State":"Add New State",
+    "Name Of State":"Name Of State",
+    'mostafa samir mostafa samir':"mostafa samir mostafa samir",
+    "National Card":"National Card" ,
+    "The target Number":"The target Number" ,
+    "i.e 2000\$":"i.e 2000\$",
+    "Last Date":"Last Date" ,
+    '2-2-2023':'2-2-2023',
+    "Description":"Description",
+    'Submit':'Submit',
   };
 }
