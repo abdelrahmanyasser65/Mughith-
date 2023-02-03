@@ -30,8 +30,12 @@ class OnBoardingScreen extends StatelessWidget {
                   TextButton(
                       onPressed: (){
                         _introController.skipButton();
-                      }, child:Text(
-                      'SKIP'.tr
+                      }, child:DefaultText(
+                      text: 'SKIP'.tr,
+                      fontSize: FontSized.s14,
+                    fontWeight: FontWeightManager.semiBold,
+                    color: ColorManager.primary,
+
                   ) ) ,
                 ],
               ),
