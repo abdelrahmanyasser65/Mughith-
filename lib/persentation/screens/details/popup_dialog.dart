@@ -1,0 +1,81 @@
+import 'package:flutter/material.dart';
+import 'package:mughith/persentation/resources/color_manager.dart';
+import 'package:mughith/persentation/resources/fonts.dart';
+import 'package:mughith/persentation/resources/values_manager.dart';
+import 'package:mughith/persentation/screens/home.dart';
+import 'package:mughith/persentation/widget/navigator.dart';
+import 'package:sizer/sizer.dart';
+
+class PopUpDialog extends StatelessWidget {
+  const PopUpDialog({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white.withOpacity(0),
+      body: Center(
+        child: Stack(
+          alignment: Alignment.topCenter,
+          children: [
+            Container(
+              padding:  EdgeInsets.only(top:
+              HeightSized.h4),
+              child: Container(
+                height: HeightSized.h25,
+                width: HeightSized.h35,
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15)),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                     SizedBox(
+                      height: HeightSized.h6,
+                    ),
+                    Text(
+                      "Your donation has been successful",
+                      style: TextStyle(
+                          fontSize: FontSized.s12,
+                          color: ColorManager.iconColor,
+                          fontWeight: FontWeightManager.bold),
+                    ),
+
+                     SizedBox(
+                      height: HeightSized.h2,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigators.navigateTo(context, HomeScreen());
+                      },
+                      child: Text(
+                        "GO BACK TO HOME",
+                        style: TextStyle(
+                            fontWeight: FontWeightManager.semiBold,
+                            color: ColorManager.primary,
+                            fontSize: FontSized.s16),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              height: HeightSized.h8,
+              width: WidthSized.w20,
+              decoration: BoxDecoration(
+                color: ColorManager.primary,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: const Icon(
+                Icons.credit_card,
+                color: Colors.white,
+                size: 35,
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

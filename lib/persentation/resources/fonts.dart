@@ -16,4 +16,5 @@ class FontSized{
   static  double s18=18.0.sp;
   static  double s20=20.0.sp;
   static  double s22=22.0.sp;
+  static double s30=33.sp;
 }

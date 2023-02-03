@@ -84,7 +84,7 @@ class NewStateScreen extends StatelessWidget {
             ),
           DefaultButton(onPressed: (){
 
-          },text: 'Submit'.tr,)
+          },text: 'Submit'.tr,color: ColorManager.primary,)
         ],
       ),
     );

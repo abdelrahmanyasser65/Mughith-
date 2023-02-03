@@ -16,3 +16,8 @@ List<String>amountList=[
   "750",
   "1000",
 ];
+List<String>payment=[
+  ImageAssets.visa,
+  ImageAssets.masterCard,
+  ImageAssets.fawry
+];

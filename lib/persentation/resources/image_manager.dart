@@ -14,4 +14,8 @@ class ImageAssets {
   static const details2="$imagePath/d2.jpg";
   static const details3="$imagePath/d3.jpg";
   static const details4="$imagePath/d4.jpg";
+  static const mugImage="$imagePath/mug.jpg";
+  static const fawry="$imagePath/fawry.png";
+  static const masterCard="$imagePath/mastercard.png";
+  static const visa="$imagePath/visa.png";
 }

@@ -3,10 +3,12 @@ import 'package:mughith/data/models/details_model.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
+import 'package:mughith/persentation/screens/details/pay_screen.dart';
 import 'package:mughith/persentation/widget/auth/center_side_text.dart';
 import 'package:mughith/persentation/widget/auth/default_button.dart';
 import 'package:mughith/persentation/widget/auth/default_text_formfiled.dart';
 import 'package:mughith/persentation/widget/default_text.dart';
+import 'package:mughith/persentation/widget/navigator.dart';
 import 'package:sizer/sizer.dart';
 class DonationAmountScreen extends StatefulWidget {
   const DonationAmountScreen({Key? key}) : super(key: key);
@@ -94,7 +96,9 @@ class _DonationAmountScreenState extends State<DonationAmountScreen> {
                 hint: "Enter your donation amount",
               ),
               SizedBox(height: HeightSized.h4,),
-              DefaultButton(onPressed: (){},
+              DefaultButton(onPressed: (){
+                Navigators.navigateTo(context,const PaymentScreen());
+              },
                   text: "Select Payment Method",
                   color: ColorManager.primary)
             ],
