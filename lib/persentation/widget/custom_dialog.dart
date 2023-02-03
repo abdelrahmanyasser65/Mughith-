@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mughith/app/controllers/category.dart';
+import 'package:mughith/persentation/resources/color_manager.dart';
+import 'package:mughith/persentation/widget/auth/default_button.dart';
 
 import '../../app/controllers/profile.dart';
 
@@ -65,6 +68,63 @@ class CustomDialog {
     );
   }
 
+
+  static Future<dynamic> showFilterDialog() {
+    final CategoryController categoryController = Get.put(CategoryController());
+    return Get.defaultDialog(
+      barrierDismissible: false,
+      titlePadding: const EdgeInsets.only(top: 20),
+      title: "Filter".tr,
+      titleStyle: const TextStyle(fontWeight: FontWeight.bold),
+      content: GetBuilder<CategoryController>(builder: (_) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20),
+          child: Column(
+            children: [
+              ListTile(
+                title: Text("Importance".tr),
+                trailing: Checkbox(
+                  value: categoryController.importanceValue,
+                  onChanged: (value) {
+                    categoryController.setimportanceValue(value ?? false);
+                  },
+                ),
+              ),
+              ListTile(
+                title: Text("Amount".tr),
+                trailing: Checkbox(
+                  value: categoryController.amounteValue,
+                  onChanged: (value) {
+                    categoryController.setamounteValue(value ?? false);
+                  },
+                ),
+              ),
+              ListTile(
+                title: Text("End Date".tr),
+                trailing: Checkbox(
+                  value: categoryController.endDateValue,
+                  onChanged: (value) {
+                    categoryController.setendDateValue(value ?? false);
+                  },
+                ),
+              ),
+              SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: DefaultButton(
+                  onPressed: () {
+                    Get.back();
+                  },
+                  text: "Apply".tr,
+                  color: ColorManager.primary,
+                ),
+              ),
+            ],
+          ),
+        );
+      }),
+    );
+  }
   // static Future<dynamic> showThemeDialog(BuildContext context) {
   //   return Get.defaultDialog(
   //     barrierDismissible: false,

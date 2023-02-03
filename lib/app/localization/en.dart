@@ -40,5 +40,13 @@ class En {
     '2-2-2023':'2-2-2023',
     "Description":"Description",
     'Submit':'Submit',
+
+    // category screen
+
+    "Importance": "Importance",
+    "Amount": "Amount",
+    "Apply": "Apply",
+    "End Date": "End Date",
+    "Filter": "Filter",
   };
 }

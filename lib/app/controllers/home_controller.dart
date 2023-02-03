@@ -15,4 +15,5 @@ class HomeController extends GetxController {
     Icons.language,
     Icons.logout,
   ];
+
 }

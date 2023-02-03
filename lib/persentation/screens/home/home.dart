@@ -7,6 +7,7 @@ import 'package:mughith/persentation/resources/values_manager.dart';
 import 'package:mughith/persentation/screens/details/details_screen.dart';
 import 'package:mughith/persentation/screens/home/new_state_screen.dart';
 import 'package:mughith/persentation/screens/home/notifaction_screen.dart';
+import 'package:mughith/persentation/screens/profile_screen.dart';
 import 'package:mughith/persentation/widget/home/home_card.dart';
 
 import '../../../app/controllers/home_controller.dart';
@@ -82,8 +83,10 @@ class HomeScreen extends StatelessWidget {
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) => GestureDetector(
                       onTap: () {
-                        // Get.to(controller.goToScreen[index]);
-
+                         //Get.to(controller.goToScreen[index]);
+                       if(index==0){
+                         Get.to(const ProfileScreen());
+                       }
                         if (index == 2) {
                           CustomDialog.showLocaleDialog();
                         }else if(index == 1){
