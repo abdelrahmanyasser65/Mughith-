@@ -31,7 +31,7 @@ class En {
     //add new state
 
     "Add New State":"Add New State",
-    "Name Of State":"Name Of State",
+    "Name of State":"Name of State",
     'mostafa samir mostafa samir':"mostafa samir mostafa samir",
     "National Card":"National Card" ,
     "The target Number":"The target Number" ,

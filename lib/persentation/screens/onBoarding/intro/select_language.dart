@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mughith/app/controllers/select_language.dart';
+import 'package:mughith/app/utils/language_options.dart';
+import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
+import 'package:mughith/persentation/resources/image_manager.dart';
+import 'package:mughith/persentation/resources/values_manager.dart';
+import 'package:mughith/persentation/widget/auth/default_button.dart';
+import 'package:mughith/persentation/widget/intro/select_lang_card.dart';
 
-import '../../../app/controllers/select_language.dart';
-import '../../../app/utils/language_options.dart';
-import '../../resources/color_manager.dart';
-import '../../resources/image_manager.dart';
-import '../../resources/values_manager.dart';
-import '../../widget/auth/default_button.dart';
-import '../../widget/intro/select_lang_card.dart';
 
 class SelectLanguageScreen extends StatefulWidget {
   const SelectLanguageScreen({super.key});
@@ -35,7 +35,13 @@ class _SelectLanguageScreenState extends State<SelectLanguageScreen> {
       child: Scaffold(
         backgroundColor: ColorManager.secondPrimary,
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
+          padding:  EdgeInsets.only(
+              left:WidthSized.w8 ,
+              right: WidthSized.w8,
+            top: HeightSized.h12,
+            bottom: HeightSized.h8
+
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -75,7 +81,7 @@ class _SelectLanguageScreenState extends State<SelectLanguageScreen> {
                   lang: LanguageOptions.en,
                 ),
               ),
-              SizedBox(height: HeightSized.h16),
+              SizedBox(height: HeightSized.h12),
               DefaultButton(
                 color: ColorManager.primary,
                 onPressed: () {

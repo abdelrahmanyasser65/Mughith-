@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
+import 'package:mughith/persentation/resources/image_manager.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
 import 'package:mughith/persentation/screens/details/details_screen.dart';
-import 'package:mughith/persentation/screens/new_state_screen.dart';
-import 'package:mughith/persentation/screens/notifaction_screen.dart';
+import 'package:mughith/persentation/screens/home/new_state_screen.dart';
+import 'package:mughith/persentation/screens/home/notifaction_screen.dart';
 import 'package:mughith/persentation/widget/home/home_card.dart';
-import 'package:mughith/persentation/widget/navigator.dart';
 
-import '../../app/controllers/home_controller.dart';
-import '../widget/custom_dialog.dart';
-import '../widget/home/category_card.dart';
-import '../widget/home/search_bar.dart';
+import '../../../app/controllers/home_controller.dart';
+import '../../widget/custom_dialog.dart';
+import '../../widget/home/category_card.dart';
+import '../../widget/home/search_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -38,39 +38,45 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  padding: const EdgeInsets.only(top: 30),
-                  height: 250,
+                  padding:  EdgeInsets.only(
+                      top: HeightSized.h6),
+                  height: HeightSized.h33,
                   color: ColorManager.primary,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        height: 100,
+                        margin: EdgeInsets.only(
+                          bottom: HeightSized.h1
+                        ),
+                        height: HeightSized.h12,
                         decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             image: DecorationImage(
-                              image: AssetImage('assets/images/man.jpg'),
+                              image: AssetImage(ImageAssets.man),
                             )),
                       ),
+
                       Text(
                         'Mostafa Samir',
                         style: TextStyle(
                           fontSize: FontSized.s18,
                           fontWeight: FontWeightManager.bold,
-                          color: ColorManager.black.withOpacity(0.7),
+                          color: ColorManager.white,
                         ),
                       ),
                       Text(
                         'mostafasamir@gmail.com',
                         style: TextStyle(
-                          color: ColorManager.black,
+                          color:ColorManager.white,
+                          fontWeight: FontWeightManager.medium
                         ),
                       ),
                     ],
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  padding:  EdgeInsets.symmetric(horizontal:HeightSized.h1 ),
                   child: ListView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
@@ -81,7 +87,7 @@ class HomeScreen extends StatelessWidget {
                         if (index == 2) {
                           CustomDialog.showLocaleDialog();
                         }else if(index == 1){
-                          Get.to(NotifactionScreen());
+                          Get.to(const NotifactionScreen());
                         }
                       },
                       child: ListTile(
@@ -107,7 +113,9 @@ class HomeScreen extends StatelessWidget {
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
+            padding: EdgeInsets.symmetric(
+                horizontal: HeightSized.h2
+            ),
             child: CircleAvatar(
               backgroundColor: Colors.white,
               radius: 20,
@@ -131,15 +139,17 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: HeightSized.h2),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15),
-              child: SearchBar(),
+             Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: HeightSized.h2
+              ),
+              child:const SearchBar(),
             ),
             SizedBox(height: HeightSized.h4),
             Container(
               color: ColorManager.white,
               width: double.infinity,
-              height: HeightSized.h16 + 20,
+              height: HeightSized.h18,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
@@ -154,7 +164,7 @@ class HomeScreen extends StatelessWidget {
                       text: "Study".tr,
                     ),
                   ),
-                  const SizedBox(width: 20),
+                  SizedBox(width: HeightSized.h2h),
                   InkWell(
                     onTap: () {},
                     child: CardCategory(
@@ -166,7 +176,7 @@ class HomeScreen extends StatelessWidget {
                       text: "Medic".tr,
                     ),
                   ),
-                  const SizedBox(width: 20),
+                  SizedBox(width: HeightSized.h2h),
                   InkWell(
                     onTap: () {},
                     child: CardCategory(
@@ -178,7 +188,7 @@ class HomeScreen extends StatelessWidget {
                       text: "Human".tr,
                     ),
                   ),
-                  const SizedBox(width: 20),
+                  SizedBox(width: HeightSized.h2h),
                   InkWell(
                     onTap: () {},
                     child: CardCategory(
@@ -195,7 +205,9 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(height: HeightSized.h4),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
+              padding:  EdgeInsets.symmetric(
+                  horizontal: HeightSized.h2
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -206,7 +218,12 @@ class HomeScreen extends StatelessWidget {
                       fontSize: FontSized.s14,
                     ),
                   ),
-                  Text("See more".tr),
+                  Text("See more".tr,
+                    style: TextStyle(
+                      fontWeight: FontWeightManager.medium,
+                      fontSize: FontSized.s12,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -217,7 +234,9 @@ class HomeScreen extends StatelessWidget {
               itemCount: 3,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  padding:  EdgeInsets.symmetric(
+                    horizontal: HeightSized.h2
+                  ),
                   child: Column(
                     children: [
                       InkWell(

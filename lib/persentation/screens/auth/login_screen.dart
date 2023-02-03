@@ -4,7 +4,7 @@ import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
 import 'package:mughith/persentation/screens/auth/sign_screen.dart';
-import 'package:mughith/persentation/screens/home.dart';
+import 'package:mughith/persentation/screens/home/home.dart';
 import 'package:mughith/persentation/widget/auth/center_side_text.dart';
 import 'package:mughith/persentation/widget/auth/default_button.dart';
 import 'package:mughith/persentation/widget/auth/default_text_formfiled.dart';
@@ -60,8 +60,8 @@ class LoginScreen extends StatelessWidget {
                 ),
                 DefaultText(
                     text: "Email".tr,
-                    color: ColorManager.textColor1,
-                    fontSize: FontSized.s12,
+                    color: ColorManager.textColor2,
+                    fontSize: FontSized.s14,
                     fontWeight: FontWeightManager.medium),
                 DefaultTextFormFiled(
                     controller: emailCon,
@@ -73,8 +73,8 @@ class LoginScreen extends StatelessWidget {
                 ),
                 DefaultText(
                     text: "password".tr,
-                    color: ColorManager.textColor1,
-                    fontSize: FontSized.s12,
+                    color: ColorManager.textColor2,
+                    fontSize: FontSized.s14,
                     fontWeight: FontWeightManager.medium),
                 DefaultTextFormFiled(
                     controller: passCon,
