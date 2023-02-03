@@ -7,8 +7,8 @@ class ImageAssets {
   static const user = 'assets/icons/user.png';
   static const man = '$imagePath/man.jpg';
   static const image = '$imagePath/image.png';
-  static const onBoarding1="$imagePath/onB1.jpg";
-  static const onBoarding2="$imagePath/onB2.jpg";
+  static const onBoarding1="$imagePath/onboarding1.gif";
+  static const onBoarding2="$imagePath/onboarding2.gif";
   static const onBoarding3="$imagePath/onB3.jpg";
   static const details1="$imagePath/d1.jpg";
   static const details2="$imagePath/d2.jpg";

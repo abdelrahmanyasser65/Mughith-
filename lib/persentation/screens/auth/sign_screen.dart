@@ -26,7 +26,7 @@ class SignUpScreen extends StatelessWidget {
             text: "Already have an account?".tr,
             text2: "Sign in".tr,
             onTap: () {
-              Navigators.navigateTo(context, LoginScreen());
+              Get.offAll(LoginScreen());
             },
           ),
           Container(

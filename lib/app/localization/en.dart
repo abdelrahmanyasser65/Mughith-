@@ -40,5 +40,18 @@ class En {
     '2-2-2023':'2-2-2023',
     "Description":"Description",
     'Submit':'Submit',
+
+
+    // onBoarding
+    'SKIP':'SKIP',
+    'Start now with Mughith Program':'Start now with Mughith Program',
+    'It is possible to donate through the program to any of the presented cases and choose your payment method.':'It is possible to donate through the program to any of the presented cases and choose your payment method.',
+    'Mange your Donation':'Mange your Donation',
+    'You can choose who get the money or you let us mange it.':'You can choose who get the money or you let us mange it.',
+    'Monthly Payment': 'Monthly Payment' ,
+    'Through the application, you can pay a constant money per month automatically.':'Through the application, you can pay a constant money per month automatically.',
+
+    'next':'next',
+    'Start Now':'Start Now',
   };
 }
