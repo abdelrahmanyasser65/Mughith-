@@ -5,16 +5,19 @@ import 'package:mughith/persentation/resources/values_manager.dart';
 import 'package:mughith/persentation/widget/default_text.dart';
 
 class DefaultButton extends StatelessWidget {
-  const DefaultButton({Key? key, required this.onPressed, required this.text})
+  const DefaultButton({Key? key, required this.onPressed, required this.text, required this.color, this.colorText=Colors.white,})
       : super(key: key);
   final Function() onPressed;
   final String text;
+  final Color color;
+  final Color colorText;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        backgroundColor: ColorManager.primary,
+        elevation: 0,
+        backgroundColor: color,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(HeightSized.h2),
         ),
@@ -25,7 +28,7 @@ class DefaultButton extends StatelessWidget {
         child: Center(
           child: DefaultText(
             text: text,
-            color: ColorManager.white,
+            color: colorText,
             fontWeight: FontWeightManager.medium,
             fontSize: FontSized.s16,
           ),

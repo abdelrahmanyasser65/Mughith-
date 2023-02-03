@@ -77,6 +77,7 @@ class _SelectLanguageScreenState extends State<SelectLanguageScreen> {
               ),
               SizedBox(height: HeightSized.h16),
               DefaultButton(
+                color: ColorManager.primary,
                 onPressed: () {
                   _languageController.setLanguage(
                       arSelected ? LanguageOptions.ar : LanguageOptions.en);

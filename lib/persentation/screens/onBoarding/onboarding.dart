@@ -60,6 +60,7 @@ final PageController controller=PageController(initialPage: 0);
                   height: HeightSized.h12,
                 ),
                 DefaultButton(
+                  color: ColorManager.primary,
                   onPressed: () {
                     Navigators.navigateAndFinish(context,
                         LoginScreen());

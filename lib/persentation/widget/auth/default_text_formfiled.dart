@@ -3,11 +3,13 @@ import 'package:mughith/app/constants.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
 class DefaultTextFormFiled extends StatelessWidget {
-  const DefaultTextFormFiled({Key? key, required this.controller, required this.textInputType, required this.obscureText, required this.prefixIcon}) : super(key: key);
+  const DefaultTextFormFiled({Key? key, required this.controller, required this.textInputType, required this.obscureText,
+    required this.prefixIcon, this.hint=''}) : super(key: key);
 final TextEditingController controller;
 final TextInputType textInputType;
 final bool obscureText;
 final IconData prefixIcon;
+final String hint;
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +38,7 @@ final IconData prefixIcon;
                 width: Constants.zero.toDouble(),
                 color: Colors.black.withOpacity(0.05),
               )),
+          hintText: hint,
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(HeightSized.h2),
               borderSide: BorderSide(

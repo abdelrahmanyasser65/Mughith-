@@ -94,7 +94,9 @@ class SignUpScreen extends StatelessWidget {
                     obscureText: true,
                     prefixIcon: Icons.lock),
                 SizedBox(height: HeightSized.h4),
-                DefaultButton(text: "SIGN UP".tr, onPressed: () {})
+                DefaultButton(
+                    color: ColorManager.primary,
+                    text: "SIGN UP".tr, onPressed: () {})
               ],
             ),
           ),

@@ -8,3 +8,11 @@ List<String>detailsImages=[
   ImageAssets.details3,
   ImageAssets.details4,
  ];
+List<String>amountList=[
+  "10",
+  "50",
+  "100",
+  "500",
+  "750",
+  "1000",
+];
