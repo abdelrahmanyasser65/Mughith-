@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
-import 'package:mughith/persentation/screens/home.dart';
+import 'package:mughith/persentation/screens/home/home.dart';
 import 'package:mughith/persentation/widget/navigator.dart';
 import 'package:sizer/sizer.dart';
 

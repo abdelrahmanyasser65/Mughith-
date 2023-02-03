@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mughith/app/constants.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
 
@@ -9,7 +8,7 @@ class CustomTextFormFiled extends StatelessWidget {
       {
         Key? key, required this.controller,
         required this.textInputType, this.hintText, this.onTap,
-        this.maxLines, this.minLines,
+        this.maxLines, this.minLines, this.suffixIcon, this.showCursor=true,
       }) : super(key: key);
   final TextEditingController controller;
   final TextInputType textInputType;
@@ -17,6 +16,8 @@ class CustomTextFormFiled extends StatelessWidget {
   final VoidCallback? onTap ;
   final int?maxLines;
   final int? minLines;
+  final Widget?suffixIcon;
+  final bool showCursor;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,15 +28,14 @@ class CustomTextFormFiled extends StatelessWidget {
         controller:controller,
         keyboardType: textInputType,
         cursorColor: Colors.grey,
+        showCursor:showCursor ,
   maxLines: maxLines,
   minLines:minLines ,
         decoration: InputDecoration(
-
+          suffixIcon: suffixIcon,
           contentPadding: const EdgeInsets.only(bottom: 10,left: 10,right: 10),
           hintText: hintText,
-          suffixIcon: controller.text.isNotEmpty?
-          Icon(Icons.verified_outlined,color: ColorManager.primary,)
-              :null,
+
           filled: true,
           fillColor: Colors.black.withOpacity(0.05),
           border: UnderlineInputBorder(

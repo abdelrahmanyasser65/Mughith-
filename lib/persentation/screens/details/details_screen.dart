@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_utils/get_utils.dart';
 import 'package:mughith/data/models/details_model.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
@@ -33,7 +35,9 @@ class DetailsScreen extends StatelessWidget {
                       shape: BoxShape.circle,
                       color: ColorManager.white
                   ),
-                  child: IconButton(onPressed: (){},
+                  child: IconButton(onPressed: (){
+                    Get.back();
+                  },
                       icon: Icon(Icons.arrow_back_outlined,
                         color: ColorManager.iconColor,)),
                 ),

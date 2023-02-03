@@ -4,7 +4,7 @@ import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/constants_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/image_manager.dart';
-import 'package:mughith/persentation/screens/intro/select_language.dart';
+import 'package:mughith/persentation/screens/onBoarding/intro/select_language.dart';
 import 'package:mughith/persentation/widget/default_text.dart';
 
 class SplashScreen extends StatefulWidget {

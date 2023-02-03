@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:sizer/sizer.dart';
 
-import '../persentation/screens/auth/splash_screen.dart';
+import '../persentation/screens/onBoarding/splash_screen.dart';
 import 'localization/languages.dart';
 
 class MyApp extends StatelessWidget {

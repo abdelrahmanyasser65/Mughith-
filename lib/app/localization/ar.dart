@@ -31,7 +31,7 @@ class Ar {
     //add new state
 
     "Add New State":"اضافة حالة جديدة",
-    "Name Of State":"اسم الحالة",
+    "Name of State":"اسم الحالة",
     'mostafa samir mostafa samir':"مصطفي سمير مصطفي سمير ",
     "National Card":"البطاقة الشخصية" ,
     "The target Number":"الرقم المطلوب" ,

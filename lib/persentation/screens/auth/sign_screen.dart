@@ -59,7 +59,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 DefaultText(
                     text: "Full Name".tr,
-                    color: ColorManager.textColor1,
+                    color: ColorManager.textColor2,
                     fontSize: FontSized.s14,
                     fontWeight: FontWeightManager.medium),
                 DefaultTextFormFiled(
@@ -72,7 +72,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 DefaultText(
                     text: "Email".tr,
-                    color: ColorManager.textColor1,
+                    color: ColorManager.textColor2,
                     fontSize: FontSized.s14,
                     fontWeight: FontWeightManager.medium),
                 DefaultTextFormFiled(
@@ -85,7 +85,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 DefaultText(
                     text: "password".tr,
-                    color: ColorManager.textColor1,
+                    color: ColorManager.textColor2,
                     fontSize: FontSized.s14,
                     fontWeight: FontWeightManager.medium),
                 DefaultTextFormFiled(
