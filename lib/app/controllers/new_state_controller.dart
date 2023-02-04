@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 
 import '../../data/models/state_model.dart';
@@ -27,8 +28,15 @@ class NewStateController extends GetxController {
         dateController.text = DateFormat('yyyy-MM-dd').format(value!));
   }
 
+  final ImagePicker imagePicker = ImagePicker();
+  List<XFile>? imageFileList = [];
+
   pickImage() async {
-    // final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+    final List<XFile>? selectedImages = await imagePicker.pickMultiImage();
+    if (selectedImages!.isNotEmpty) {
+      imageFileList!.addAll(selectedImages);
+    }
+    print("Image List Length:" + imageFileList!.length.toString());
   }
 
   confirmNewState() {
