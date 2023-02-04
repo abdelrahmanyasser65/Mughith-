@@ -10,10 +10,12 @@ import 'package:mughith/persentation/screens/category_screen.dart';
 import 'package:mughith/persentation/screens/details/details_screen.dart';
 import 'package:mughith/persentation/screens/home/new_state_screen.dart';
 import 'package:mughith/persentation/screens/home/notifaction_screen.dart';
+import 'package:mughith/persentation/screens/one_time_donate_screen.dart';
 import 'package:mughith/persentation/screens/profile_screen.dart';
 import 'package:mughith/persentation/screens/zakah/zakah.dart';
 import 'package:mughith/persentation/widget/home/home_card.dart';
 import 'package:mughith/persentation/widget/navigator.dart';
+import 'package:sizer/sizer.dart';
 
 import '../../../app/controllers/home_controller.dart';
 import '../../widget/custom_dialog.dart';
@@ -83,14 +85,14 @@ class HomeScreen extends StatelessWidget {
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) => GestureDetector(
                       onTap: () {
-                         //Get.to(controller.goToScreen[index]);
-                       if(index==0){
-                         Get.to( ProfileScreen());
-                       }
-                        if (index == 2) {
+                        if (index == 0) {
+                          Get.to(ProfileScreen());
+                        } else if (index == 2) {
                           CustomDialog.showLocaleDialog();
                         } else if (index == 1) {
                           Get.to(const NotifactionScreen());
+                        } else if (index == 3) {
+                          CustomDialog.showLogoutDialog();
                         }
                       },
                       child: ListTile(
@@ -147,6 +149,53 @@ class HomeScreen extends StatelessWidget {
               child: const SearchBar(),
             ),
             SizedBox(height: HeightSized.h4),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: InkWell(
+                onTap: () {
+                  Get.to(OneTimeDonateScreen());
+                },
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  width: double.infinity,
+                  height: HeightSized.h16,
+                  decoration: BoxDecoration(
+                    color: ColorManager.white,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Help a person by one click".tr,
+                        style: TextStyle(
+                          color: ColorManager.black,
+                          fontSize: FontSized.s16,
+                          fontWeight: FontWeightManager.bold,
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: 70.w,
+                            child: Text(
+                                "He donated five pounds to help someone with one click"
+                                    .tr),
+                          ),
+                          Image.asset(
+                            "assets/icons/donate.jpeg",
+                            fit: BoxFit.cover,
+                            width: 60,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: HeightSized.h4),
             Container(
               color: ColorManager.white,
               width: double.infinity,
@@ -170,7 +219,7 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(width: HeightSized.h2h),
                   InkWell(
                     onTap: () {
-                     Navigators.navigateTo(context,const ZakatScreen());
+                      Navigators.navigateTo(context, const ZakatScreen());
                     },
                     child: CardCategory(
                       isBlack: false,
