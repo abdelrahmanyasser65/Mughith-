@@ -74,7 +74,7 @@ class NewStateScreen extends StatelessWidget {
                     fontWeight: FontWeightManager.medium,
                   ),
                   CustomTextFormFiled(
-                    controller:controller.imageController ,
+                    controller:controller.imageNationalController ,
                     textInputType:TextInputType.text ,
                     onTap: () => controller.pickImage(),
                     showCursor: false,
@@ -116,6 +116,27 @@ class NewStateScreen extends StatelessWidget {
                   SizedBox(
                     height: HeightSized.h3,
                   ),
+
+                  DefaultText(
+                    text: "images of state".tr,
+                    color: ColorManager.textColor2,
+                    fontSize: FontSized.s14,
+                    fontWeight: FontWeightManager.medium,
+                  ),
+                  CustomTextFormFiled(
+                    controller:controller.imagesController ,
+                    textInputType:TextInputType.text ,
+                    onTap: () => controller.pickImage(),
+                    showCursor: false,
+                    suffixIcon: Padding(
+                        padding: EdgeInsets.symmetric(
+                            vertical: HeightSized.h1
+                        ),
+                        child: Icon(Icons.camera_alt_rounded,color: ColorManager.iconColor,)),
+                  ),
+                  SizedBox(
+                    height: HeightSized.h3,
+                  ),
                   DefaultText(
                       text: "Description".tr,
                       color: ColorManager.textColor2,
@@ -132,7 +153,7 @@ class NewStateScreen extends StatelessWidget {
                     height: HeightSized.h6,
                   ),
                   DefaultButton(onPressed: (){
-
+                    controller.confirmNewState();
                   },text: 'Submit'.tr,color: ColorManager.primary,),
                   SizedBox(
                     height: HeightSized.h4,

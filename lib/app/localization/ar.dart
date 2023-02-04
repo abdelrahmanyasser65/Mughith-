@@ -98,6 +98,7 @@ class Ar {
     '2-2-2023':'2-2-2023',
     "Description":"الوصف",
     'Submit':'تاكيد',
+    "images of state":"صور للحالة",
 
 
     //onBoarding

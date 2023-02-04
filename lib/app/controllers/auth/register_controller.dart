@@ -36,8 +36,7 @@ class RegisterController extends GetxController
       firestore.collection('users').doc(auth.currentUser!.uid).set({
         'name':fullName.text.toString(),
         'email':email.text.toString(),
-      },
-      ) ;
+      },) ;
       Get.off(HomeScreen());
     }).catchError(
             (e){Get.snackbar('Error', e.toString());

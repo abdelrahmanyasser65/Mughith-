@@ -97,6 +97,7 @@ However, the most correct legal method is to calculate zakat and pay it after on
     '2-2-2023':'2-2-2023',
     "Description":"Description",
     'Submit':'Submit',
+    "images of state":"images of state",
 
 
     // onBoarding
