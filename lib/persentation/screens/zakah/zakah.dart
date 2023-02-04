@@ -48,7 +48,7 @@ class _ZakahScreenState extends State<ZakahScreen> {
                     Get.to(CalculateZakah());
                   },
                   child: ZakahCard(
-                    text: "حساب الزكاة",
+                    text: 'Zakat calculation'.tr,
                     icon: Icon(
                       Icons.calculate,
                       size: 30,
@@ -58,12 +58,12 @@ class _ZakahScreenState extends State<ZakahScreen> {
                 ),
                 InkWell(
                   onTap: () {
-                    Get.to(PaymentScreen());
+                    Get.to(ZakahInfoScreen());
                   },
                   child: ZakahCard(
-                    text: "دفع الزكاة",
+                    text:  "Information about zakat".tr,
                     icon: Icon(
-                      Icons.payment,
+                      Icons.info_outline,
                       size: 30,
                       color: ColorManager.black,
                     ),
@@ -72,34 +72,6 @@ class _ZakahScreenState extends State<ZakahScreen> {
               ],
             ),
             SizedBox(height: HeightSized.h8),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                InkWell(
-                  onTap: () {
-                    Get.to(ZakahInfoScreen());
-                  },
-                  child: ZakahCard(
-                    text: "معلومات عن الزكاه",
-                    icon: Icon(
-                      Icons.info_outline,
-                      size: 30,
-                      color: ColorManager.black,
-                    ),
-                  ),
-                ),
-                InkWell(
-                  child: ZakahCard(
-                    text: "اخري",
-                    icon: Icon(
-                      Icons.more_horiz,
-                      size: 30,
-                      color: ColorManager.black,
-                    ),
-                  ),
-                ),
-              ],
-            ),
           ],
         ),
       ),

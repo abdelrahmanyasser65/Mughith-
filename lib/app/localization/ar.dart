@@ -46,6 +46,8 @@ class Ar {
     "Language":"تغيير اللغة",
     "Logout":"تسجيل خروج" ,
 
+    "Zakah":"الزكاه",
+
    //notifaction
     "no1":"لقد تبرعت بنجاح ، لقد تبرعت للحاله رقم 7594573",
     "no2":"تمت الآن إضافة حالة جديدة يمكنك التبرع لها ومعرفة التفاصيل",
@@ -75,5 +77,19 @@ class Ar {
     'Through the application, you can pay a constant money per month automatically.':'من خلال التطبيق يمكنك دفع مبلغ ثابت شهريًا بشكل تلقائي.',
     'next':'التالي',
     'Start Now':"ابدأ الان",
+
+    //zakah
+
+    'Zakat calculation':'حساب الذكاة' ,
+    "Information about zakat":"معلومات عن الذكاة",
+    'Zakat per person':"الذكاة للفرد",
+
+    'pound':'جنيه',
+    "Enter the number of people":'ادخل عدد الافراد',
+    'total zakat':'اجمالي الذكاة',
+    'Do You Want To Pay Now ?':'هل تريد الدفع الان؟',
+    'yes':'نعم',
+    'not now':'ليس الان',
+    "Calculate":"احسب" ,
   };
 }

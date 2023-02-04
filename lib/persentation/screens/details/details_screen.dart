@@ -145,7 +145,7 @@ class DetailsScreen extends StatelessWidget {
                     fontWeight: FontWeightManager.regular,),
               ),
             ),
-            SizedBox(height: HeightSized.h6,),
+            SizedBox(height: HeightSized.h3,),
             DefaultButton(onPressed: (){
               Navigators.navigateTo(context,const DonationAmountScreen());
             },

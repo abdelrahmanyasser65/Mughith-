@@ -26,6 +26,7 @@ class ZakahCard extends StatelessWidget {
           SizedBox(height: HeightSized.h2),
           Text(
             text,
+            textAlign: TextAlign.center,
             style: TextStyle(
               color: ColorManager.black,
               fontSize: FontSized.s14,

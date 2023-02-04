@@ -39,6 +39,8 @@ class En {
     "Added status":"Added status",
     "Total amount":"Total amount",
     "UpDate":"UpDate",
+
+    "Zakah":"Zakah" ,
     //notifaction
     "no1":"You have successfully donated, you have donated to case number 7594573",
     "no2":"A new case has now been added to which you can donate and find out the details",
@@ -74,5 +76,22 @@ class En {
 
     'next':'next',
     'Start Now':'Start Now',
+
+    //zakah
+
+    'Zakat calculation':'Zakat calculation' ,
+    "Information about zakat":"Information about zakat",
+
+    'Zakat per person': 'Zakat per person' ,
+
+    'pound':'pound',
+    "Enter the number of people":"Enter the number of people",
+
+    'total zakat':'total zakat',
+    'Do You Want To Pay Now ?':'Do You Want To Pay Now ?',
+    'yes':'yes',
+    'not now':'not now',
+    "Calculate":"Calculate" ,
+
   };
 }

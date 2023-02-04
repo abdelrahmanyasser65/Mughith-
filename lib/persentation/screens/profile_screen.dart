@@ -11,6 +11,8 @@ import 'package:mughith/persentation/widget/default_text.dart';
 import 'package:mughith/persentation/widget/profile_widget.dart';
 import 'package:sizer/sizer.dart';
 
+import '../widget/auth/default_text_formfiled.dart';
+
 class ProfileScreen extends StatelessWidget {
    ProfileScreen({Key? key}) : super(key: key);
  final TextEditingController nameController=TextEditingController();

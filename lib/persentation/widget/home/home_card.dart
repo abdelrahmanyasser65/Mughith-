@@ -14,7 +14,7 @@ class HomeCard extends StatelessWidget {
     return Container(
       width: double.infinity,
       margin: EdgeInsets.all(HeightSized.h2),
-      height: 42.h,
+      height: HeightSized.h40,
       decoration: BoxDecoration(
         color: ColorManager.white,
         borderRadius: BorderRadius.circular(10),
@@ -29,44 +29,20 @@ class HomeCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
               child: Image.asset(ImageAssets.image),
             ),
-            SizedBox(height: HeightSized.h1,),
+            const SizedBox(height: 10),
             Text(
               "Help Them Smile Again".tr,
               style: TextStyle(
                 fontSize: FontSized.s14,
               ),
             ),
-            SizedBox(height: HeightSized.h1,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Text(
-                      "Target".tr,
-                      style: TextStyle(fontWeight: FontWeightManager.bold,
-                          color: ColorManager.iconColor),
-                    ),
-                    Text(
-                      "70,000",
-                      style: TextStyle(color: ColorManager.textColor2,fontWeight: FontWeightManager.semiBold),
-                    ),
-                  ],
-                ),
-                Text(
-                  "2 Days left".tr,
-                  style: TextStyle(fontWeight: FontWeightManager.bold,
-                      color: ColorManager.primary),
-                )
-              ],
-            ),
-            SizedBox(height: HeightSized.h1,),
+            const SizedBox(height: 10),
             LinearProgressIndicator(
               value: 0.8,
               color: ColorManager.primary,
               backgroundColor: ColorManager.primary.withOpacity(0.3),
             ),
-             SizedBox(height: HeightSized.h1),
+            const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

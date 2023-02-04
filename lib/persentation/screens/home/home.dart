@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
 import 'package:get/get.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
@@ -174,10 +173,10 @@ class HomeScreen extends StatelessWidget {
                     child: CardCategory(
                       isBlack: false,
                       icon: Icon(
-                        FlutterIslamicIcons.zakat,
+                        Icons.local_hospital,
                         color: ColorManager.black,
                       ),
-                      text: "الزكاة".tr,
+                      text: "Zakah".tr,
                     ),
                   ),
                   SizedBox(width: HeightSized.h2h),

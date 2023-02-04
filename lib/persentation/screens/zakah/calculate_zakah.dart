@@ -9,6 +9,7 @@ import 'package:mughith/persentation/widget/custom_dialog.dart';
 import '../../resources/color_manager.dart';
 import '../../widget/auth/default_button.dart';
 import '../../widget/auth/default_text_formfiled.dart';
+import '../details/pay_screen.dart';
 
 class CalculateZakah extends StatelessWidget {
   final TextEditingController textEditingController = TextEditingController();
@@ -20,7 +21,7 @@ class CalculateZakah extends StatelessWidget {
           color: ColorManager.black,
         ),
         title: Text(
-          "Calculate Zakah",
+          'Zakat calculation'.tr,
           style: TextStyle(
             color: ColorManager.black,
           ),
@@ -39,7 +40,7 @@ class CalculateZakah extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "الزكاه للفرد",
+                  'Zakat per person'.tr,
                   style: TextStyle(
                     fontSize: FontSized.s16,
                     fontWeight: FontWeightManager.bold,
@@ -47,7 +48,7 @@ class CalculateZakah extends StatelessWidget {
                 ),
                 SizedBox(width: 5),
                 Text(
-                  "50 جنيه",
+                  "50 ${'pound'.tr}",
                   style: TextStyle(
                     fontSize: FontSized.s16,
                     fontWeight: FontWeightManager.bold,
@@ -61,7 +62,7 @@ class CalculateZakah extends StatelessWidget {
               controller: textEditingController,
               obscureText: false,
               textInputType: TextInputType.number,
-              hint: "أدخل عدد الافراد",
+              hint: "Enter the number of people".tr,
               prefixIcon: Icons.numbers,
             ),
             SizedBox(height: HeightSized.h6),
@@ -69,10 +70,17 @@ class CalculateZakah extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: DefaultButton(
                 onPressed: () {
-                  // Get.back();
-                  CustomDialog.showSuccessDialog().then((value) {
-                    // Get.to(page)
-                  });
+                  Get.defaultDialog(
+                    title:'${int.parse(textEditingController.text)*50}${'total zakat'.tr}',
+                    middleText: 'Do You Want To Pay Now ?'.tr,
+                    textConfirm: 'yes'.tr,
+                    textCancel: 'not now'.tr,
+                    buttonColor: ColorManager.primary,
+                    confirmTextColor: ColorManager.white,
+                    cancelTextColor: ColorManager.black,
+                    onConfirm: () => Get.to(const PaymentScreen()),
+                    onCancel:()=> Get.back(),
+                  );
                 },
                 text: "Calculate".tr,
                 color: ColorManager.primary,

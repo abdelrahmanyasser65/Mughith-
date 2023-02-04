@@ -24,44 +24,46 @@ class ZakahInfoScreen extends StatelessWidget {
         elevation: 0,
       ),
       body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-              child: Text(
-                "معلومات عن الزكاه",
-                style: TextStyle(
-                  fontWeight: FontWeightManager.bold,
-                  fontSize: FontSized.s16,
-                  color: ColorManager.primary,
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Center(
+                child: Text(
+                  "معلومات عن الزكاه",
+                  style: TextStyle(
+                    fontWeight: FontWeightManager.bold,
+                    fontSize: FontSized.s16,
+                    color: ColorManager.primary,
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: HeightSized.h3),
-            Text(
-              "هل الزكاة واجبة ؟",
-              style: TextStyle(
-                fontWeight: FontWeightManager.bold,
-                fontSize: FontSized.s14,
-                // color: ColorManager.primary,
+              SizedBox(height: HeightSized.h3),
+              Text(
+                "هل الزكاة واجبة ؟",
+                style: TextStyle(
+                  fontWeight: FontWeightManager.bold,
+                  fontSize: FontSized.s14,
+                  // color: ColorManager.primary,
+                ),
               ),
-            ),
-            SizedBox(height: HeightSized.h1),
-            Text(
-                "زكاة المال واجب شرعي وفريضة إسلامية على كل مسلمٍ عاقل مكلّف قادِر، وهي من أعظم الفرائض لدرجة أن تاركها عمداً قد يعرض نفسه لخطر في عقيدته كمسلم بناءً على إجماع علماء المسلمين. فعن عبدالله بن عمر رضي الله عنهما قال: سمعت رسول الله صلى الله عليه وسلم يقولُ: “بُنِي الإسلامُ عَلى خَمْسٍ: شَهادةِ أنْ لا إلهَ إلاَّ الله، وأنَّ مُحمَّداً عَبْدُه وَرَسولُهُ، وإقامِ الصلاةِ، وإيتاءِ الزَّكاةِ، وحَجِّ البيتِ، وصَومِ رَمضانَ“. رَواهُ البُخارِي ومُسلمٌ."),
-            SizedBox(height: HeightSized.h3),
-            Text(
-              "من الذي تجب عليه الزكاة",
-              style: TextStyle(
-                fontWeight: FontWeightManager.bold,
-                fontSize: FontSized.s14,
-                // color: ColorManager.primary,
+              SizedBox(height: HeightSized.h1),
+              Text(
+                  "زكاة المال واجب شرعي وفريضة إسلامية على كل مسلمٍ عاقل مكلّف قادِر، وهي من أعظم الفرائض لدرجة أن تاركها عمداً قد يعرض نفسه لخطر في عقيدته كمسلم بناءً على إجماع علماء المسلمين. فعن عبدالله بن عمر رضي الله عنهما قال: سمعت رسول الله صلى الله عليه وسلم يقولُ: “بُنِي الإسلامُ عَلى خَمْسٍ: شَهادةِ أنْ لا إلهَ إلاَّ الله، وأنَّ مُحمَّداً عَبْدُه وَرَسولُهُ، وإقامِ الصلاةِ، وإيتاءِ الزَّكاةِ، وحَجِّ البيتِ، وصَومِ رَمضانَ“. رَواهُ البُخارِي ومُسلمٌ."),
+              SizedBox(height: HeightSized.h3),
+              Text(
+                "من الذي تجب عليه الزكاة",
+                style: TextStyle(
+                  fontWeight: FontWeightManager.bold,
+                  fontSize: FontSized.s14,
+                  // color: ColorManager.primary,
+                ),
               ),
-            ),
-            SizedBox(height: HeightSized.h1),
-            Text(
-                '''وفقًا للمذهب الحنفي، يجب دفع الزكاة على كل مسلم بالغ عاقل ويملك مقدارًا من الثروة (الأصول الصافية) تتجاوز حدّ النصاب.
+              SizedBox(height: HeightSized.h1),
+              Text(
+                  '''وفقًا للمذهب الحنفي، يجب دفع الزكاة على كل مسلم بالغ عاقل ويملك مقدارًا من الثروة (الأصول الصافية) تتجاوز حدّ النصاب.
 
 في حين يرى المذهب الشافعي والمالكي والحنبلي أن الزكاة واجبة أيضًا على الأطفال وعلى المجانين، إذا بلغت ثروتهم حدَ النصاب.
 
@@ -84,31 +86,32 @@ class ZakahInfoScreen extends StatelessWidget {
 يؤدي الكثير من المسلمين الزكاة خلال شهر رمضان، حيث يسهل عليهم تذكر وقتها. وفي كثير من الأحيان يُخرجونها في ليلة السابع والعشرين من رمضان سعيًا منهم في تعظيم الأجر والثواب.
 
 إلا أن الطريقة الشرعية الأصح هي حساب الزكاة وإخراجها بعد سنة هجرية واحدة ابتداء من اليوم الذي تجاوزت فيه ثروتك مبلغ النصاب'''),
-            SizedBox(height: HeightSized.h3),
-            Text(
-              "هل الزكاة واجبة ؟",
-              style: TextStyle(
-                fontWeight: FontWeightManager.bold,
-                fontSize: FontSized.s14,
-                // color: ColorManager.primary,
+              SizedBox(height: HeightSized.h3),
+              Text(
+                "هل الزكاة واجبة ؟",
+                style: TextStyle(
+                  fontWeight: FontWeightManager.bold,
+                  fontSize: FontSized.s14,
+                  // color: ColorManager.primary,
+                ),
               ),
-            ),
-            SizedBox(height: HeightSized.h1),
-            Text(
-                "زكاة المال واجب شرعي وفريضة إسلامية على كل مسلمٍ عاقل مكلّف قادِر، وهي من أعظم الفرائض لدرجة أن تاركها عمداً قد يعرض نفسه لخطر في عقيدته كمسلم بناءً على إجماع علماء المسلمين. فعن عبدالله بن عمر رضي الله عنهما قال: سمعت رسول الله صلى الله عليه وسلم يقولُ: “بُنِي الإسلامُ عَلى خَمْسٍ: شَهادةِ أنْ لا إلهَ إلاَّ الله، وأنَّ مُحمَّداً عَبْدُه وَرَسولُهُ، وإقامِ الصلاةِ، وإيتاءِ الزَّكاةِ، وحَجِّ البيتِ، وصَومِ رَمضانَ“. رَواهُ البُخارِي ومُسلمٌ."),
-            SizedBox(height: HeightSized.h3),
-            Text(
-              "هل الزكاة واجبة ؟",
-              style: TextStyle(
-                fontWeight: FontWeightManager.bold,
-                fontSize: FontSized.s14,
-                // color: ColorManager.primary,
+              SizedBox(height: HeightSized.h1),
+              Text(
+                  "زكاة المال واجب شرعي وفريضة إسلامية على كل مسلمٍ عاقل مكلّف قادِر، وهي من أعظم الفرائض لدرجة أن تاركها عمداً قد يعرض نفسه لخطر في عقيدته كمسلم بناءً على إجماع علماء المسلمين. فعن عبدالله بن عمر رضي الله عنهما قال: سمعت رسول الله صلى الله عليه وسلم يقولُ: “بُنِي الإسلامُ عَلى خَمْسٍ: شَهادةِ أنْ لا إلهَ إلاَّ الله، وأنَّ مُحمَّداً عَبْدُه وَرَسولُهُ، وإقامِ الصلاةِ، وإيتاءِ الزَّكاةِ، وحَجِّ البيتِ، وصَومِ رَمضانَ“. رَواهُ البُخارِي ومُسلمٌ."),
+              SizedBox(height: HeightSized.h3),
+              Text(
+                "هل الزكاة واجبة ؟",
+                style: TextStyle(
+                  fontWeight: FontWeightManager.bold,
+                  fontSize: FontSized.s14,
+                  // color: ColorManager.primary,
+                ),
               ),
-            ),
-            SizedBox(height: HeightSized.h1),
-            Text(
-                "زكاة المال واجب شرعي وفريضة إسلامية على كل مسلمٍ عاقل مكلّف قادِر، وهي من أعظم الفرائض لدرجة أن تاركها عمداً قد يعرض نفسه لخطر في عقيدته كمسلم بناءً على إجماع علماء المسلمين. فعن عبدالله بن عمر رضي الله عنهما قال: سمعت رسول الله صلى الله عليه وسلم يقولُ: “بُنِي الإسلامُ عَلى خَمْسٍ: شَهادةِ أنْ لا إلهَ إلاَّ الله، وأنَّ مُحمَّداً عَبْدُه وَرَسولُهُ، وإقامِ الصلاةِ، وإيتاءِ الزَّكاةِ، وحَجِّ البيتِ، وصَومِ رَمضانَ“. رَواهُ البُخارِي ومُسلمٌ.")
-          ],
+              SizedBox(height: HeightSized.h1),
+              Text(
+                  "زكاة المال واجب شرعي وفريضة إسلامية على كل مسلمٍ عاقل مكلّف قادِر، وهي من أعظم الفرائض لدرجة أن تاركها عمداً قد يعرض نفسه لخطر في عقيدته كمسلم بناءً على إجماع علماء المسلمين. فعن عبدالله بن عمر رضي الله عنهما قال: سمعت رسول الله صلى الله عليه وسلم يقولُ: “بُنِي الإسلامُ عَلى خَمْسٍ: شَهادةِ أنْ لا إلهَ إلاَّ الله، وأنَّ مُحمَّداً عَبْدُه وَرَسولُهُ، وإقامِ الصلاةِ، وإيتاءِ الزَّكاةِ، وحَجِّ البيتِ، وصَومِ رَمضانَ“. رَواهُ البُخارِي ومُسلمٌ.")
+            ],
+          ),
         ),
       ),
     );
