@@ -39,6 +39,10 @@ class En {
     "Added status":"Added status",
     "Total amount":"Total amount",
     "UpDate":"UpDate",
+    //notifaction
+    "no1":"You have successfully donated, you have donated to case number 7594573",
+    "no2":"A new case has now been added to which you can donate and find out the details",
+    "no3":"Ahmed Yasser and Khaled Hussein also donated in case number 7594573",
     //drawer
     "Profile":"Profile",
     "notifications":"notifications",

@@ -209,7 +209,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(width: HeightSized.h2h),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(const CategoryScreen());
+                    },
                     child: CardCategory(
                       isBlack: true,
                       icon: Icon(

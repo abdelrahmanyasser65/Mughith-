@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mughith/data/models/details_model.dart';
+import 'package:get/get.dart';
 import 'package:mughith/data/models/notifactino_model.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
-import 'package:mughith/persentation/screens/details/popup_dialog.dart';
 import 'package:mughith/persentation/widget/auth/center_side_text.dart';
 import 'package:mughith/persentation/widget/default_text.dart';
 import 'package:sizer/sizer.dart';
@@ -40,7 +39,7 @@ class NotifactionScreen extends StatelessWidget {
                   ),
                   SizedBox(width: WidthSized.w16,),
                   CenterSideText(
-                    text: "Notifaction",
+                    text: "notifications".tr,
                     fontS:  FontSized.s16,
                     fontW:  FontWeightManager.semiBold,)
                 ],
