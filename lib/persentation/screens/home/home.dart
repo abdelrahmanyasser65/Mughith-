@@ -5,6 +5,7 @@ import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/image_manager.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
+import 'package:mughith/persentation/screens/alms/alms_screen.dart';
 import 'package:mughith/persentation/screens/category_screen.dart';
 import 'package:mughith/persentation/screens/details/details_screen.dart';
 import 'package:mughith/persentation/screens/home/new_state_screen.dart';
@@ -197,15 +198,15 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(width: HeightSized.h2h),
                   InkWell(
                     onTap: () {
-                      Get.to(const CategoryScreen());
+                      Get.to(const AlmsScreen());
                     },
                     child: CardCategory(
                       isBlack: false,
                       icon: Icon(
-                        Icons.local_hospital,
+                        FlutterIslamicIcons.lantern,
                         color: ColorManager.black,
                       ),
-                      text: "Medic".tr,
+                      text: "Alms".tr,
                     ),
                   ),
                   SizedBox(width: HeightSized.h2h),

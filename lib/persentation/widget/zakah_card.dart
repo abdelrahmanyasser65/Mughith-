@@ -36,13 +36,16 @@ class ZakatCard extends StatelessWidget {
             color: ColorManager.primary
         ),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Icon(icon,color: ColorManager.white,size:30,),
             SizedBox(width: HeightSized.h2,),
-            SizedBox(
+            Container(
+              padding: EdgeInsets.only(
+                top: 1.5.h
+              ),
               width: 24.h,
               height: 10.h,
-
               child: DefaultText(
 
                   text: text,
