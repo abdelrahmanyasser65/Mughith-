@@ -4,6 +4,7 @@ import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/image_manager.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
+import 'package:mughith/persentation/screens/category_screen.dart';
 import 'package:mughith/persentation/screens/details/details_screen.dart';
 import 'package:mughith/persentation/screens/home/new_state_screen.dart';
 import 'package:mughith/persentation/screens/home/notifaction_screen.dart';
@@ -79,10 +80,10 @@ class HomeScreen extends StatelessWidget {
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) => GestureDetector(
                       onTap: () {
-                        //Get.to(controller.goToScreen[index]);
-                        if (index == 0) {
-                          Get.to(const ProfileScreen());
-                        }
+                         //Get.to(controller.goToScreen[index]);
+                       if(index==0){
+                         Get.to(const ProfileScreen());
+                       }
                         if (index == 2) {
                           CustomDialog.showLocaleDialog();
                         } else if (index == 1) {
@@ -151,7 +152,9 @@ class HomeScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(const CategoryScreen());
+                    },
                     child: CardCategory(
                       isBlack: true,
                       icon: Icon(
@@ -163,7 +166,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(width: HeightSized.h2h),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(const CategoryScreen());
+                    },
                     child: CardCategory(
                       isBlack: false,
                       icon: Icon(
@@ -175,7 +180,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(width: HeightSized.h2h),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(const CategoryScreen());
+                    },
                     child: CardCategory(
                       isBlack: true,
                       icon: Icon(
@@ -187,9 +194,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(width: HeightSized.h2h),
                   InkWell(
-                    onTap: () {
-                      Get.to(ZakahScreen());
-                    },
+                    onTap: () {},
                     child: CardCategory(
                       isBlack: false,
                       icon: Icon(
