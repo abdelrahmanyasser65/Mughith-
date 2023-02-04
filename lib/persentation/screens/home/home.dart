@@ -9,6 +9,7 @@ import 'package:mughith/persentation/screens/category_screen.dart';
 import 'package:mughith/persentation/screens/details/details_screen.dart';
 import 'package:mughith/persentation/screens/home/new_state_screen.dart';
 import 'package:mughith/persentation/screens/home/notifaction_screen.dart';
+import 'package:mughith/persentation/screens/one_time_donate_screen.dart';
 import 'package:mughith/persentation/screens/profile_screen.dart';
 import 'package:mughith/persentation/screens/zakah/zakah.dart';
 import 'package:mughith/persentation/widget/home/home_card.dart';
@@ -149,42 +150,47 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: HeightSized.h4),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Container(
-                padding: EdgeInsets.all(10),
-                width: double.infinity,
-                height: HeightSized.h16,
-                decoration: BoxDecoration(
-                  color: ColorManager.white,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Help a person by one click".tr,
-                      style: TextStyle(
-                        color: ColorManager.black,
-                        fontSize: FontSized.s16,
-                        fontWeight: FontWeightManager.bold,
+              child: InkWell(
+                onTap: () {
+                  Get.to(OneTimeDonateScreen());
+                },
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  width: double.infinity,
+                  height: HeightSized.h16,
+                  decoration: BoxDecoration(
+                    color: ColorManager.white,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Help a person by one click".tr,
+                        style: TextStyle(
+                          color: ColorManager.black,
+                          fontSize: FontSized.s16,
+                          fontWeight: FontWeightManager.bold,
+                        ),
                       ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          width: 70.w,
-                          child: Text(
-                              "He donated five pounds to help someone with one click"
-                                  .tr),
-                        ),
-                        Image.asset(
-                          "assets/icons/donate.jpeg",
-                          fit: BoxFit.cover,
-                          width: 60,
-                        ),
-                      ],
-                    ),
-                  ],
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: 70.w,
+                            child: Text(
+                                "He donated five pounds to help someone with one click"
+                                    .tr),
+                          ),
+                          Image.asset(
+                            "assets/icons/donate.jpeg",
+                            fit: BoxFit.cover,
+                            width: 60,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

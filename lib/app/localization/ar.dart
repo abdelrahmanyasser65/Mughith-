@@ -138,7 +138,7 @@ class Ar {
 
     // one time donate
 
-    "Help a person by one click": "قم بساعدة شخص بنقرة واحدة",
+    "Help a person by one click": "قم بمساعدة شخص بنقرة واحدة",
     "He donated five pounds to help someone with one click":
         "قام بالتبرع بخمسة جنيهات لمساعده شخص بضغطه واحده"
   };

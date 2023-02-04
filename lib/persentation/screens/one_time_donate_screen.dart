@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mughith/persentation/widget/auth/default_button.dart';
 
 import '../resources/color_manager.dart';
 import '../resources/fonts.dart';
@@ -12,43 +13,39 @@ class OneTimeDonateScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Row(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle, color: ColorManager.white),
-                child: IconButton(
-                    onPressed: () {
-                      Get.back();
-                    },
-                    icon: Icon(
-                      Icons.arrow_back_outlined,
-                      color: ColorManager.iconColor,
-                    )),
-              ),
-              SizedBox(
-                width: WidthSized.w20,
-              ),
-              CenterSideText(
-                text: "One Time Donate".tr,
-                fontS: FontSized.s18,
-                fontW: FontWeightManager.semiBold,
-              ),
-            ],
+      appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: ColorManager.black,
+        ),
+        title: Text(
+          "One Time Donate".tr,
+          style: TextStyle(
+            color: ColorManager.black,
           ),
-          SizedBox(
-            height: HeightSized.h4,
-          ),
-          Center(
-            child: Text(
-              "Help a person by one click".tr,
-              style: TextStyle(
-                  fontWeight: FontWeightManager.bold, fontSize: FontSized.s14),
+        ),
+        centerTitle: true,
+        backgroundColor: ColorManager.secondPrimary,
+        elevation: 0,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          children: [
+            Center(
+              child: Text(
+                "Help a person by one click".tr,
+                style: TextStyle(
+                    fontWeight: FontWeightManager.bold,
+                    fontSize: FontSized.s14),
+              ),
             ),
-          )
-        ],
+            DefaultButton(
+              onPressed: () {},
+              text: "Donate",
+              color: ColorManager.primary,
+            ),
+          ],
+        ),
       ),
     );
   }
