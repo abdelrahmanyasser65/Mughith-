@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "350127755001",
+    "project_id": "mughith-59279",
+    "storage_bucket": "mughith-59279.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350127755001:android:df62acc54f839400e1dc28",
+        "android_client_info": {
+          "package_name": "com.example.mughith"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350127755001-c09roj0ct6ve8pn6scoafsp3kr5gu8uf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhUeXMCoqDv7HFQADcJv8bP8Za0SR_W2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350127755001-c09roj0ct6ve8pn6scoafsp3kr5gu8uf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
