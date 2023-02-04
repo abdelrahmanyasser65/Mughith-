@@ -11,11 +11,13 @@ import 'package:mughith/persentation/widget/auth/default_text_formfiled.dart';
 import 'package:mughith/persentation/widget/auth/upper_side.dart';
 import 'package:mughith/persentation/widget/default_text.dart';
 import 'package:mughith/persentation/widget/navigator.dart';
+import 'package:get/get.dart';
+
+import '../../../app/controllers/auth/login_controller.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
-  final TextEditingController emailCon = TextEditingController();
-  final TextEditingController passCon = TextEditingController();
+  final LoginController controller= Get.put(LoginController());
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +66,7 @@ class LoginScreen extends StatelessWidget {
                     fontSize: FontSized.s14,
                     fontWeight: FontWeightManager.medium),
                 DefaultTextFormFiled(
-                    controller: emailCon,
+                    controller: controller.email,
                     textInputType: TextInputType.emailAddress,
                     obscureText: false,
                     prefixIcon: Icons.email),
@@ -77,14 +79,14 @@ class LoginScreen extends StatelessWidget {
                     fontSize: FontSized.s14,
                     fontWeight: FontWeightManager.medium),
                 DefaultTextFormFiled(
-                    controller: passCon,
+                    controller: controller.password,
                     textInputType: TextInputType.visiblePassword,
                     obscureText: true,
                     prefixIcon: Icons.lock),
                 SizedBox(height: HeightSized.h4),
                 DefaultButton(text: "Sign in".tr,
                   onPressed: () {
-                  Navigators.navigateAndFinish(context, HomeScreen());
+                  controller.confirmLogin();
                   },
                 color: ColorManager.primary,
                 )

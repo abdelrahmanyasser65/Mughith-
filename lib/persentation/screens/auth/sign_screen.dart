@@ -10,13 +10,12 @@ import 'package:mughith/persentation/widget/auth/default_button.dart';
 import 'package:mughith/persentation/widget/auth/default_text_formfiled.dart';
 import 'package:mughith/persentation/widget/auth/upper_side.dart';
 import 'package:mughith/persentation/widget/default_text.dart';
-import 'package:mughith/persentation/widget/navigator.dart';
+
+import '../../../app/controllers/auth/register_controller.dart';
 
 class SignUpScreen extends StatelessWidget {
   SignUpScreen({Key? key}) : super(key: key);
-  final TextEditingController emailCon = TextEditingController();
-  final TextEditingController passCon = TextEditingController();
-  final TextEditingController fullName = TextEditingController();
+  final RegisterController controller = Get.put(RegisterController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +63,7 @@ class SignUpScreen extends StatelessWidget {
                     fontSize: FontSized.s14,
                     fontWeight: FontWeightManager.medium),
                 DefaultTextFormFiled(
-                    controller: fullName,
+                    controller: controller.fullName,
                     textInputType: TextInputType.name,
                     obscureText: false,
                     prefixIcon: Icons.account_circle_rounded),
@@ -77,7 +76,7 @@ class SignUpScreen extends StatelessWidget {
                     fontSize: FontSized.s14,
                     fontWeight: FontWeightManager.medium),
                 DefaultTextFormFiled(
-                    controller: emailCon,
+                    controller: controller.email,
                     textInputType: TextInputType.emailAddress,
                     obscureText: false,
                     prefixIcon: Icons.email),
@@ -90,7 +89,7 @@ class SignUpScreen extends StatelessWidget {
                     fontSize: FontSized.s14,
                     fontWeight: FontWeightManager.medium),
                 DefaultTextFormFiled(
-                    controller: passCon,
+                    controller: controller.password,
                     textInputType: TextInputType.visiblePassword,
                     obscureText: true,
                     prefixIcon: Icons.lock),
@@ -98,7 +97,7 @@ class SignUpScreen extends StatelessWidget {
                 DefaultButton(
                     color: ColorManager.primary,
                     text: "SIGN UP".tr, onPressed: () {
-                      Get.to(HomeScreen());
+                      controller.confirmRegister();
                 })
               ],
             ),
