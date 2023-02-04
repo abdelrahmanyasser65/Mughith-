@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 import 'package:mughith/app/controllers/category.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/widget/auth/default_button.dart';
@@ -68,7 +69,6 @@ class CustomDialog {
     );
   }
 
-
   static Future<dynamic> showFilterDialog() {
     final CategoryController categoryController = Get.put(CategoryController());
     return Get.defaultDialog(
@@ -125,6 +125,21 @@ class CustomDialog {
       }),
     );
   }
+
+  static Future<dynamic> showSuccessDialog() {
+    final CategoryController categoryController = Get.put(CategoryController());
+    Future.delayed(Duration(milliseconds: 1000), () {
+      Get.back();
+    });
+    return Get.defaultDialog(
+      barrierDismissible: false,
+      titlePadding: const EdgeInsets.only(top: 0),
+      title: "".tr,
+      titleStyle: const TextStyle(fontWeight: FontWeight.bold),
+      content: Lottie.asset("assets/icons/done.json"),
+    );
+  }
+
   // static Future<dynamic> showThemeDialog(BuildContext context) {
   //   return Get.defaultDialog(
   //     barrierDismissible: false,

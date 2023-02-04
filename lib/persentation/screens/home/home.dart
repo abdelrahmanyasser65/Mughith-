@@ -8,6 +8,7 @@ import 'package:mughith/persentation/screens/details/details_screen.dart';
 import 'package:mughith/persentation/screens/home/new_state_screen.dart';
 import 'package:mughith/persentation/screens/home/notifaction_screen.dart';
 import 'package:mughith/persentation/screens/profile_screen.dart';
+import 'package:mughith/persentation/screens/zakah/zakah.dart';
 import 'package:mughith/persentation/widget/home/home_card.dart';
 
 import '../../../app/controllers/home_controller.dart';
@@ -23,7 +24,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: (){
+        onPressed: () {
           Get.to(NewStateScreen());
         },
         backgroundColor: ColorManager.primary,
@@ -39,17 +40,14 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  padding:  EdgeInsets.only(
-                      top: HeightSized.h6),
+                  padding: EdgeInsets.only(top: HeightSized.h6),
                   height: HeightSized.h33,
                   color: ColorManager.primary,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        margin: EdgeInsets.only(
-                          bottom: HeightSized.h1
-                        ),
+                        margin: EdgeInsets.only(bottom: HeightSized.h1),
                         height: HeightSized.h12,
                         decoration: const BoxDecoration(
                             shape: BoxShape.circle,
@@ -57,7 +55,6 @@ class HomeScreen extends StatelessWidget {
                               image: AssetImage(ImageAssets.man),
                             )),
                       ),
-
                       Text(
                         'Mostafa Samir',
                         style: TextStyle(
@@ -69,27 +66,26 @@ class HomeScreen extends StatelessWidget {
                       Text(
                         'mostafasamir@gmail.com',
                         style: TextStyle(
-                          color:ColorManager.white,
-                          fontWeight: FontWeightManager.medium
-                        ),
+                            color: ColorManager.white,
+                            fontWeight: FontWeightManager.medium),
                       ),
                     ],
                   ),
                 ),
                 Padding(
-                  padding:  EdgeInsets.symmetric(horizontal:HeightSized.h1 ),
+                  padding: EdgeInsets.symmetric(horizontal: HeightSized.h1),
                   child: ListView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) => GestureDetector(
                       onTap: () {
-                         //Get.to(controller.goToScreen[index]);
-                       if(index==0){
-                         Get.to(const ProfileScreen());
-                       }
+                        //Get.to(controller.goToScreen[index]);
+                        if (index == 0) {
+                          Get.to(const ProfileScreen());
+                        }
                         if (index == 2) {
                           CustomDialog.showLocaleDialog();
-                        }else if(index == 1){
+                        } else if (index == 1) {
                           Get.to(const NotifactionScreen());
                         }
                       },
@@ -116,15 +112,15 @@ class HomeScreen extends StatelessWidget {
         ),
         actions: [
           Padding(
-            padding: EdgeInsets.symmetric(
-                horizontal: HeightSized.h2
-            ),
+            padding: EdgeInsets.symmetric(horizontal: HeightSized.h2),
             child: CircleAvatar(
               backgroundColor: Colors.white,
               radius: 20,
               child: IconButton(
-                icon:const Icon(Icons.notifications,),
-                onPressed: (){
+                icon: const Icon(
+                  Icons.notifications,
+                ),
+                onPressed: () {
                   Get.to(const NotifactionScreen());
                 },
                 color: ColorManager.black,
@@ -142,11 +138,9 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: HeightSized.h2),
-             Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: HeightSized.h2
-              ),
-              child:const SearchBar(),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: HeightSized.h2),
+              child: const SearchBar(),
             ),
             SizedBox(height: HeightSized.h4),
             Container(
@@ -193,12 +187,26 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(width: HeightSized.h2h),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(ZakahScreen());
+                    },
                     child: CardCategory(
                       isBlack: false,
                       icon: Icon(
-                        Icons.abc,
+                        Icons.sentiment_satisfied,
                         color: ColorManager.black,
+                      ),
+                      text: "الزكاة".tr,
+                    ),
+                  ),
+                  SizedBox(width: HeightSized.h2h),
+                  InkWell(
+                    onTap: () {},
+                    child: CardCategory(
+                      isBlack: true,
+                      icon: Icon(
+                        Icons.abc,
+                        color: ColorManager.white,
                       ),
                       text: "Other".tr,
                     ),
@@ -208,9 +216,7 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(height: HeightSized.h4),
             Padding(
-              padding:  EdgeInsets.symmetric(
-                  horizontal: HeightSized.h2
-              ),
+              padding: EdgeInsets.symmetric(horizontal: HeightSized.h2),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -221,7 +227,8 @@ class HomeScreen extends StatelessWidget {
                       fontSize: FontSized.s14,
                     ),
                   ),
-                  Text("See more".tr,
+                  Text(
+                    "See more".tr,
                     style: TextStyle(
                       fontWeight: FontWeightManager.medium,
                       fontSize: FontSized.s12,
@@ -237,9 +244,7 @@ class HomeScreen extends StatelessWidget {
               itemCount: 3,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding:  EdgeInsets.symmetric(
-                    horizontal: HeightSized.h2
-                  ),
+                  padding: EdgeInsets.symmetric(horizontal: HeightSized.h2),
                   child: Column(
                     children: [
                       InkWell(

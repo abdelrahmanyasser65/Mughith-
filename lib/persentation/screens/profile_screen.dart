@@ -6,6 +6,7 @@ import 'package:mughith/persentation/resources/image_manager.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
 import 'package:sizer/sizer.dart';
 
+
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
