@@ -55,11 +55,11 @@ class _AlmsScreenState extends State<AlmsScreen> {
             ),
             ZakatCard(
                 text: "select amount now and time for handouts".tr, icon: Icons.calculate_outlined, onTap: (){
-                  Get.to(const SelectAmount());
+              Get.to(const SelectAmount());
             }),
             ZakatCard(
                 text: "al1".tr, icon: Icons.info_outline, onTap: (){
-                  Get.to(const AlmsInfoScreen());
+              Get.to(const AlmsInfoScreen());
             })
 
           ],
