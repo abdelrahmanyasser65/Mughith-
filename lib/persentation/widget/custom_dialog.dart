@@ -3,13 +3,17 @@ import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:mughith/app/controllers/category.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
+import 'package:mughith/persentation/screens/auth/login_screen.dart';
 import 'package:mughith/persentation/widget/auth/default_button.dart';
 
+import '../../app/controllers/auth/login_controller.dart';
 import '../../app/controllers/profile.dart';
 
 class CustomDialog {
   static final ProfileController _profileController =
       Get.put(ProfileController());
+
+  static final LoginController _loginController = Get.put(LoginController());
 
   static Future<dynamic> showLocaleDialog() {
     return Get.defaultDialog(
@@ -140,6 +144,34 @@ class CustomDialog {
     );
   }
 
+  static Future<dynamic> showCustomDialogIndecator() {
+    return Get.defaultDialog(
+      barrierDismissible: false,
+      titlePadding: const EdgeInsets.only(top: 20),
+      title: "Loading".tr,
+      titleStyle: const TextStyle(fontWeight: FontWeight.bold),
+      content: WillPopScope(
+        onWillPop: () async {
+          return false;
+        },
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20),
+          child: Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                const SizedBox(width: 40),
+                const CircularProgressIndicator(),
+                const SizedBox(width: 30),
+                Text("Please Wait...".tr)
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   // static Future<dynamic> showThemeDialog(BuildContext context) {
   //   return Get.defaultDialog(
   //     barrierDismissible: false,
@@ -196,53 +228,58 @@ class CustomDialog {
   //   );
   // }
 
-  // static Future<dynamic> showLogoutDialog() {
-  //   return Get.defaultDialog(
-  //     barrierDismissible: false,
-  //     titlePadding: const EdgeInsets.only(top: 20),
-  //     title: "Are You Sure ?".tr,
-  //     titleStyle: const TextStyle(fontWeight: FontWeight.bold),
-  //     content: Padding(
-  //       padding: const EdgeInsets.symmetric(vertical: 20),
-  //       child: Row(
-  //         mainAxisAlignment: MainAxisAlignment.center,
-  //         children: [
-  //           InkWell(
-  //             onTap: () {},
-  //             child: Container(
-  //               padding:
-  //                   const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-  //               decoration: BoxDecoration(
-  //                 color: Colors.green[400],
-  //                 borderRadius: BorderRadius.circular(10),
-  //               ),
-  //               child: Text("Yes".tr,
-  //                   style: const TextStyle(
-  //                       fontWeight: FontWeight.bold, color: Colors.white)),
-  //             ),
-  //           ),
-  //           const SizedBox(width: 15),
-  //           InkWell(
-  //             onTap: () {
-  //               Get.back();
-  //             },
-  //             child: Container(
-  //               padding:
-  //                   const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-  //               decoration: BoxDecoration(
-  //                 color: Colors.red[700],
-  //                 borderRadius: BorderRadius.circular(10),
-  //               ),
-  //               child: Text(
-  //                 "No".tr,
-  //                 style: const TextStyle(
-  //                     fontWeight: FontWeight.bold, color: Colors.white),
-  //               ),
-  //             ),
-  //           ),
-  //         ],
-  //       ),
-  //     ),
-  //   );
-  // }
+  static Future<dynamic> showLogoutDialog() {
+    return Get.defaultDialog(
+      barrierDismissible: false,
+      titlePadding: const EdgeInsets.only(top: 20),
+      title: "Are You Sure ?".tr,
+      titleStyle: const TextStyle(fontWeight: FontWeight.bold),
+      content: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 20),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            InkWell(
+              onTap: () {
+                _loginController.logout().then((value) {
+                  Get.back();
+                  Get.to(LoginScreen());
+                });
+              },
+              child: Container(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                decoration: BoxDecoration(
+                  color: Colors.green[400],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text("Yes".tr,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.white)),
+              ),
+            ),
+            const SizedBox(width: 15),
+            InkWell(
+              onTap: () {
+                Get.back();
+              },
+              child: Container(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                decoration: BoxDecoration(
+                  color: Colors.red[700],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text(
+                  "No".tr,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.white),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
