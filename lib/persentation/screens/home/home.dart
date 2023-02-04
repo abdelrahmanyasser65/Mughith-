@@ -12,6 +12,7 @@ import 'package:mughith/persentation/screens/home/notifaction_screen.dart';
 import 'package:mughith/persentation/screens/profile_screen.dart';
 import 'package:mughith/persentation/screens/zakah/zakah.dart';
 import 'package:mughith/persentation/widget/home/home_card.dart';
+import 'package:mughith/persentation/widget/navigator.dart';
 
 import '../../../app/controllers/home_controller.dart';
 import '../../widget/custom_dialog.dart';
@@ -168,7 +169,7 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(width: HeightSized.h2h),
                   InkWell(
                     onTap: () {
-                      Get.to(const ZakahScreen());
+                     Navigators.navigateTo(context,const ZakahScreen());
                     },
                     child: CardCategory(
                       isBlack: false,
