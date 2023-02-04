@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
 import 'package:get/get.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
@@ -82,7 +83,7 @@ class HomeScreen extends StatelessWidget {
                       onTap: () {
                          //Get.to(controller.goToScreen[index]);
                        if(index==0){
-                         Get.to(const ProfileScreen());
+                         Get.to( ProfileScreen());
                        }
                         if (index == 2) {
                           CustomDialog.showLocaleDialog();
@@ -167,15 +168,15 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(width: HeightSized.h2h),
                   InkWell(
                     onTap: () {
-                      Get.to(const CategoryScreen());
+                      Get.to(const ZakahScreen());
                     },
                     child: CardCategory(
                       isBlack: false,
                       icon: Icon(
-                        Icons.local_hospital,
+                        FlutterIslamicIcons.zakat,
                         color: ColorManager.black,
                       ),
-                      text: "Medic".tr,
+                      text: "الزكاة".tr,
                     ),
                   ),
                   SizedBox(width: HeightSized.h2h),
@@ -194,14 +195,16 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(width: HeightSized.h2h),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(const CategoryScreen());
+                    },
                     child: CardCategory(
                       isBlack: false,
                       icon: Icon(
-                        Icons.sentiment_satisfied,
+                        Icons.local_hospital,
                         color: ColorManager.black,
                       ),
-                      text: "الزكاة".tr,
+                      text: "Medic".tr,
                     ),
                   ),
                   SizedBox(width: HeightSized.h2h),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:mughith/data/models/details_model.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
@@ -36,7 +37,7 @@ class ImagesScreen extends StatelessWidget {
                ),
                SizedBox(width: WidthSized.w20,),
                CenterSideText(
-                 text: "More Image",
+                 text: "More Image".tr,
                  fontS:  FontSized.s18,
                  fontW:  FontWeightManager.semiBold,)
              ],

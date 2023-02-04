@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:mughith/data/models/details_model.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
@@ -37,7 +38,7 @@ class PaymentScreen extends StatelessWidget {
                   ),
                   SizedBox(width: WidthSized.w4,),
                   CenterSideText(
-                    text: "Choose the payment method",
+                    text: "Choose the payment method".tr,
                     fontS:  FontSized.s16,
                     fontW:  FontWeightManager.semiBold,)
                 ],

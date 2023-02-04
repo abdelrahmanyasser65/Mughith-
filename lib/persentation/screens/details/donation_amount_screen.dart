@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:mughith/data/models/details_model.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
@@ -32,7 +33,7 @@ class _DonationAmountScreenState extends State<DonationAmountScreen> {
               left: WidthSized.w8,
               right: WidthSized.w8,
               top: HeightSized.h8,
-            bottom: HeightSized.h2
+            bottom: HeightSized.h4
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,7 +53,7 @@ class _DonationAmountScreenState extends State<DonationAmountScreen> {
                   ),
                   SizedBox(width: WidthSized.w20,),
                   CenterSideText(
-                    text: "Donation Amount",
+                    text: "Donation Amount".tr,
                     fontS:  FontSized.s18,
                     fontW:  FontWeightManager.semiBold,)
                 ],
@@ -84,7 +85,7 @@ class _DonationAmountScreenState extends State<DonationAmountScreen> {
                 ),
               ),
               SizedBox(height: HeightSized.h1,),
-              DefaultText(text: "Other Amount",
+              DefaultText(text: "Other Amount".tr,
                   color: ColorManager.textColor2,
                   fontSize: FontSized.s14,
                   fontWeight: FontWeightManager.semiBold),
@@ -93,13 +94,13 @@ class _DonationAmountScreenState extends State<DonationAmountScreen> {
                   textInputType: TextInputType.number,
                   obscureText: false,
                   prefixIcon:Icons.attach_money_outlined,
-                hint: "Enter your donation amount",
+                hint: "Enter your donation amount".tr,
               ),
-              SizedBox(height: HeightSized.h4,),
+              SizedBox(height: HeightSized.h2,),
               DefaultButton(onPressed: (){
                 Navigators.navigateTo(context,const PaymentScreen());
               },
-                  text: "Select Payment Method",
+                  text: "Select Payment Method".tr,
                   color: ColorManager.primary)
             ],
           ),

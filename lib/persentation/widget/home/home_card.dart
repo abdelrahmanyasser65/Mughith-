@@ -4,6 +4,7 @@ import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/image_manager.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
+import 'package:sizer/sizer.dart';
 
 class HomeCard extends StatelessWidget {
   const HomeCard({super.key});
@@ -12,7 +13,7 @@ class HomeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: HeightSized.h40,
+      height: 42.h,
       decoration: BoxDecoration(
         color: ColorManager.white,
         borderRadius: BorderRadius.circular(10),
@@ -27,20 +28,44 @@ class HomeCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
               child: Image.asset(ImageAssets.image),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: HeightSized.h1,),
             Text(
               "Help Them Smile Again".tr,
               style: TextStyle(
                 fontSize: FontSized.s14,
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: HeightSized.h1,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      "Target".tr,
+                      style: TextStyle(fontWeight: FontWeightManager.bold,
+                          color: ColorManager.iconColor),
+                    ),
+                    Text(
+                      "70,000",
+                      style: TextStyle(color: ColorManager.textColor2,fontWeight: FontWeightManager.semiBold),
+                    ),
+                  ],
+                ),
+                Text(
+                  "2 Days left".tr,
+                  style: TextStyle(fontWeight: FontWeightManager.bold,
+                      color: ColorManager.primary),
+                )
+              ],
+            ),
+            SizedBox(height: HeightSized.h1,),
             LinearProgressIndicator(
               value: 0.8,
               color: ColorManager.primary,
               backgroundColor: ColorManager.primary.withOpacity(0.3),
             ),
-            const SizedBox(height: 10),
+             SizedBox(height: HeightSized.h1),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

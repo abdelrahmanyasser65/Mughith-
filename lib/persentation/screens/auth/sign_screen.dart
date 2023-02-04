@@ -4,6 +4,7 @@ import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
 import 'package:mughith/persentation/screens/auth/login_screen.dart';
+import 'package:mughith/persentation/screens/home/home.dart';
 import 'package:mughith/persentation/widget/auth/center_side_text.dart';
 import 'package:mughith/persentation/widget/auth/default_button.dart';
 import 'package:mughith/persentation/widget/auth/default_text_formfiled.dart';
@@ -96,7 +97,9 @@ class SignUpScreen extends StatelessWidget {
                 SizedBox(height: HeightSized.h4),
                 DefaultButton(
                     color: ColorManager.primary,
-                    text: "SIGN UP".tr, onPressed: () {})
+                    text: "SIGN UP".tr, onPressed: () {
+                      Get.to(HomeScreen());
+                })
               ],
             ),
           ),

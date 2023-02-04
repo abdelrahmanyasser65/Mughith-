@@ -6,6 +6,7 @@ import 'package:mughith/persentation/resources/image_manager.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
 import 'package:mughith/persentation/screens/home/home.dart';
 import 'package:mughith/persentation/widget/auth/default_button.dart';
+import 'package:mughith/persentation/widget/auth/default_text_formfiled.dart';
 import 'package:mughith/persentation/widget/default_text.dart';
 import 'package:mughith/persentation/widget/profile_widget.dart';
 import 'package:sizer/sizer.dart';
@@ -105,7 +106,7 @@ class ProfileScreen extends StatelessWidget {
                          RotatedBox(
                           quarterTurns: 1,
                           child: DefaultText(
-                            text:"Donate now",
+                            text:"Donate Now".tr,
                             fontWeight: FontWeightManager.semiBold,
                             fontSize: FontSized.s14,
                             color: ColorManager.textColor2,
@@ -130,10 +131,10 @@ class ProfileScreen extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const[
-                  BuildColumn(title: "13", subTitle: "Donations"),
-                  BuildColumn(title: "7", subTitle: "Added status"),
-                  BuildColumn(title: "\$ 3500", subTitle: "Total amount"),
+                children: [
+                  BuildColumn(title: "13", subTitle: "Donations".tr),
+                  BuildColumn(title: "7", subTitle: "Added status".tr),
+                  BuildColumn(title: "\$ 3500", subTitle: "Total amount".tr),
 
                 ],
               ),
@@ -170,7 +171,7 @@ class ProfileScreen extends StatelessWidget {
                         prefixIcon: Icons.email),
                     SizedBox(height: 1.h,),
                     DefaultButton(onPressed: (){},
-                        text: "UpDate", color: ColorManager.primary),
+                        text: "UpDate".tr, color: ColorManager.primary),
 
                   ],
                 ),

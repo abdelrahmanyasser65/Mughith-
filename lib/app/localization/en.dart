@@ -20,8 +20,25 @@ class En {
     "Human": "Human",
     "Other": "Other",
     "Help Them Smile Again": "Help Them Smile Again",
-
-
+    "Hello Good People":"Hello Good People",
+    "Target":"Target : ",
+    "2 Days left":"2 Days left",
+    "Details":"Details",
+    "desDetails":  "As soon as you complete our donation, we will start its journey. First your money will be "
+        "turned into food, and then sent to one of the over 120 countries where people are most vulnerable. Every single day.",
+    "Donate Now":"Donate Now",
+    "Donation Amount":"Donation Amount",
+    "Other Amount":"Other Amount",
+    "Enter your donation amount":"Enter your donation amount",
+    "Select Payment Method":"Select Payment Method",
+    "Choose the payment method":"Choose the payment method",
+    "More Image":"More Image",
+    "Your donation has been successful":"Your donation has been successful",
+    "GO BACK TO HOME":"GO BACK TO HOME",
+    "Donations":"Donations",
+    "Added status":"Added status",
+    "Total amount":"Total amount",
+    "UpDate":"UpDate",
     //drawer
     "Profile":"Profile",
     "notifications":"notifications",

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
 import 'package:mughith/persentation/screens/home/home.dart';
 import 'package:mughith/persentation/widget/navigator.dart';
-import 'package:sizer/sizer.dart';
 
 class PopUpDialog extends StatelessWidget {
   const PopUpDialog({Key? key}) : super(key: key);
@@ -34,7 +34,7 @@ class PopUpDialog extends StatelessWidget {
                       height: HeightSized.h6,
                     ),
                     Text(
-                      "Your donation has been successful",
+                      "Your donation has been successful".tr,
                       style: TextStyle(
                           fontSize: FontSized.s12,
                           color: ColorManager.iconColor,
@@ -49,7 +49,7 @@ class PopUpDialog extends StatelessWidget {
                         Navigators.navigateTo(context, HomeScreen());
                       },
                       child: Text(
-                        "GO BACK TO HOME",
+                        "GO BACK TO HOME".tr,
                         style: TextStyle(
                             fontWeight: FontWeightManager.semiBold,
                             color: ColorManager.primary,
