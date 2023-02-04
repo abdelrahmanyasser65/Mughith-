@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
 import 'package:get/get.dart';
 import 'package:mughith/persentation/resources/color_manager.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
@@ -168,15 +169,15 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(width: HeightSized.h2h),
                   InkWell(
                     onTap: () {
-                     Navigators.navigateTo(context,const ZakahScreen());
+                     Navigators.navigateTo(context,const ZakatScreen());
                     },
                     child: CardCategory(
                       isBlack: false,
                       icon: Icon(
-                        Icons.local_hospital,
+                        FlutterIslamicIcons.zakat,
                         color: ColorManager.black,
                       ),
-                      text: "Zakah".tr,
+                      text: "zakat".tr,
                     ),
                   ),
                   SizedBox(width: HeightSized.h2h),
@@ -254,7 +255,7 @@ class HomeScreen extends StatelessWidget {
               itemCount: 3,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: EdgeInsets.symmetric(horizontal: HeightSized.h2),
+                  padding: EdgeInsets.symmetric(horizontal: HeightSized.h1),
                   child: Column(
                     children: [
                       InkWell(

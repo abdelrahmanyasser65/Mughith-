@@ -40,7 +40,41 @@ class En {
     "Total amount":"Total amount",
     "UpDate":"UpDate",
 
-    "Zakah":"Zakah" ,
+    "zakat":"Zakat" ,
+    "calZakat":"Calculate your zakat now and donate",
+    "infZakat":"Information about zakat",
+    "Information":"Information",
+    "inf1":"Information about zakat",
+    "inf2":"Is zakat obligatory?",
+    "inf3":"“Zakat on money is a legal duty and an Islamic obligation for every sane, responsible, capable Muslim. It is one of the greatest obligations to the extent that one who intentionally abandons it may expose himself to danger in his belief as a Muslim, based on the consensus of Muslim scholars. On the authority of Abdullah bin Omar, may God be pleased with them both, he said: I heard the Messenger of God, may God bless him and grant him peace And he said: “Islam is built on five: testifying that there is no god but God, and that Muhammad is His servant and Messenger, establishing prayer, paying zakat, pilgrimage to the House, and fasting Ramadan.” Narrated by Al-Bukhari and Muslim.",
+    "inf4":"Who is obligated to pay zakat?",
+    "inf5":''' “According to the Hanafi school of thought, zakat must be paid by every sane adult Muslim who possesses an amount of wealth (net assets) that exceeds the nisab limit.
+
+While the Shafi’i, Maliki and Hanbali schools see that zakat is also obligatory for children and the insane, if their wealth reaches the nisab limit.
+
+ 
+
+The word “nisab” means the minimum amount of property or wealth/assets that a Muslim must have before he is obligated to start paying Zakat. This minimum amount is called the nisab limit.
+
+You become obligated to pay zakat on the day your wealth reaches the nisab limit. Zakat is calculated and paid on wealth after a full lunar year has passed. The length of the lunar year is about 354 days.
+
+Example: Abdullah recently joined a job, and after one month of work, he received a monthly salary of 1,000 riyals, and Abdullah had no debts. Therefore, his wealth is a thousand riyals in full. The quorum limit at that time was 190 riyals. Thus, Abdullah becomes obligated to pay zakat because his new wealth exceeds the nisab.
+
+After 354 days - a full Hijri year - it is time for Abdullah to reassess his situation and find out how much wealth/net assets he has in excess of the Nisab.
+
+Abdullah found that he had saved 10,000 riyals and had immediate/short-term debts of 2,000 riyals.
+
+Thus, at the end of the Hijri year, Abdullah’s net worth or assets amounted to 8,000 riyals, while the nisab value at that time was 200 riyals.
+
+Therefore, Abdullah will have to pay zakat of 200 riyals, which is 2.5% of the 8,000 riyals.
+
+Many Muslims pay zakat during the month of Ramadan, as it is easier for them to remember when. In many cases, they take it out on the night of the twenty-seventh of Ramadan, seeking to maximize the reward.
+
+However, the most correct legal method is to calculate zakat and pay it after one Hijri year, starting from the day your wealth exceeds the nisab amount.''',
+    "inf6":"Is zakat obligatory?",
+    "inf7":"“Zakat on money is a legal duty and an Islamic obligation for every sane, responsible, capable Muslim. It is one of the greatest obligations to the extent that one who intentionally abandons it may expose himself to danger in his belief as a Muslim, based on the consensus of Muslim scholars. On the authority of Abdullah bin Omar, may God be pleased with them both, he said: I heard the Messenger of God, may God bless him and grant him peace And he said: “Islam is built on five: testifying that there is no god but God, and that Muhammad is His servant and Messenger, establishing prayer, paying zakat, pilgrimage to the House, and fasting Ramadan.” Narrated by Al-Bukhari and Muslim.",
+    "inf8":"Is zakat obligatory?",
+    "inf9":"“Zakat on money is a legal duty and an Islamic obligation for every sane, responsible, capable Muslim. It is one of the greatest obligations to the extent that one who intentionally abandons it may expose himself to danger in his belief as a Muslim, based on the consensus of Muslim scholars. On the authority of Abdullah bin Omar, may God be pleased with them both, he said: I heard the Messenger of God, may God bless him and grant him peace And he said: “Islam is built on five: testifying that there is no god but God, and that Muhammad is His servant and Messenger, establishing prayer, paying zakat, pilgrimage to the House, and fasting Ramadan.” Narrated by Al-Bukhari and Muslim.",
     //notifaction
     "no1":"You have successfully donated, you have donated to case number 7594573",
     "no2":"A new case has now been added to which you can donate and find out the details",

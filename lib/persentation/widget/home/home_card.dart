@@ -13,7 +13,8 @@ class HomeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      margin: EdgeInsets.all(HeightSized.h2),
+      margin: EdgeInsets.all(1.h
+      ),
       height: HeightSized.h40,
       decoration: BoxDecoration(
         color: ColorManager.white,

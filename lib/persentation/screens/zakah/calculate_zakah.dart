@@ -4,7 +4,9 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/resources/values_manager.dart';
+import 'package:mughith/persentation/widget/auth/center_side_text.dart';
 import 'package:mughith/persentation/widget/custom_dialog.dart';
+import 'package:sizer/sizer.dart';
 
 import '../../resources/color_manager.dart';
 import '../../widget/auth/default_button.dart';
@@ -16,26 +18,38 @@ class CalculateZakah extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: ColorManager.black,
-        ),
-        title: Text(
-          'Zakat calculation'.tr,
-          style: TextStyle(
-            color: ColorManager.black,
-          ),
-        ),
-        centerTitle: true,
-        backgroundColor: ColorManager.secondPrimary,
-        elevation: 0,
-      ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding:  EdgeInsets.only(
+            left: WidthSized.w8,
+            right: WidthSized.w8,
+            top: HeightSized.h8
+        ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+
           children: [
+            Row(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: ColorManager.white
+                  ),
+                  child: IconButton(onPressed: (){
+                    Navigator.pop(context);
+                  },
+                      icon: Icon(Icons.arrow_back_outlined,
+                        color: ColorManager.iconColor,)),
+                ),
+                SizedBox(width: WidthSized.w20,),
+                CenterSideText(
+                  text: 'Zakat calculation'.tr,
+                  fontS:  FontSized.s18,
+                  fontW:  FontWeightManager.semiBold,)
+              ],
+            ),
+            SizedBox(
+              height: 20.h,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -46,7 +60,7 @@ class CalculateZakah extends StatelessWidget {
                     fontWeight: FontWeightManager.bold,
                   ),
                 ),
-                SizedBox(width: 5),
+                SizedBox(width: 1.w),
                 Text(
                   "50 ${'pound'.tr}",
                   style: TextStyle(
@@ -66,25 +80,22 @@ class CalculateZakah extends StatelessWidget {
               prefixIcon: Icons.numbers,
             ),
             SizedBox(height: HeightSized.h6),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: DefaultButton(
-                onPressed: () {
-                  Get.defaultDialog(
-                    title:'${int.parse(textEditingController.text)*50}${'total zakat'.tr}',
-                    middleText: 'Do You Want To Pay Now ?'.tr,
-                    textConfirm: 'yes'.tr,
-                    textCancel: 'not now'.tr,
-                    buttonColor: ColorManager.primary,
-                    confirmTextColor: ColorManager.white,
-                    cancelTextColor: ColorManager.black,
-                    onConfirm: () => Get.to(const PaymentScreen()),
-                    onCancel:()=> Get.back(),
-                  );
-                },
-                text: "Calculate".tr,
-                color: ColorManager.primary,
-              ),
+            DefaultButton(
+              onPressed: () {
+                Get.defaultDialog(
+                  title:'${int.parse(textEditingController.text)*50}${' total zakat'.tr}',
+                  middleText: 'Do You Want To Pay Now ?'.tr,
+                  textConfirm: 'yes'.tr,
+                  textCancel: 'not now'.tr,
+                  buttonColor: ColorManager.primary,
+                  confirmTextColor: ColorManager.white,
+                  cancelTextColor: ColorManager.black,
+                  onConfirm: () => Get.to(const PaymentScreen()),
+                  onCancel:()=> Get.back(),
+                );
+              },
+              text: "Calculate".tr,
+              color: ColorManager.primary,
             ),
           ],
         ),

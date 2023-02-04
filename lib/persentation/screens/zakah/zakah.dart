@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mughith/persentation/resources/fonts.dart';
 import 'package:mughith/persentation/screens/zakah/calculate_zakah.dart';
+import 'package:mughith/persentation/widget/auth/center_side_text.dart';
+import 'package:mughith/persentation/widget/default_text.dart';
 import 'package:mughith/persentation/widget/home/category_card.dart';
 
 import '../../resources/color_manager.dart';
@@ -10,68 +12,58 @@ import '../../widget/zakah_card.dart';
 import '../details/pay_screen.dart';
 import 'zakah_info.dart';
 
-class ZakahScreen extends StatefulWidget {
-  const ZakahScreen({super.key});
+class ZakatScreen extends StatefulWidget {
+  const ZakatScreen({super.key});
 
   @override
-  State<ZakahScreen> createState() => _ZakahScreenState();
+  State<ZakatScreen> createState() => _ZakatScreenState();
 }
 
-class _ZakahScreenState extends State<ZakahScreen> {
+class _ZakatScreenState extends State<ZakatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: ColorManager.black,
-        ),
-        title: Text(
-          "الزكاة",
-          style: TextStyle(
-            color: ColorManager.black,
-          ),
-        ),
-        centerTitle: true,
-        backgroundColor: ColorManager.secondPrimary,
-        elevation: 0,
-      ),
+
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding:  EdgeInsets.only(
+            left: WidthSized.w8,
+            right: WidthSized.w8,
+            top: HeightSized.h8
+        ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                InkWell(
-                  onTap: () {
-                    Get.to(CalculateZakah());
-                  },
-                  child: ZakahCard(
-                    text: 'Zakat calculation'.tr,
-                    icon: Icon(
-                      Icons.calculate,
-                      size: 30,
-                      color: ColorManager.black,
-                    ),
+                Container(
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: ColorManager.white
                   ),
-                ),
-                InkWell(
-                  onTap: () {
-                    Get.to(ZakahInfoScreen());
+                  child: IconButton(onPressed: (){
+                    Navigator.pop(context);
                   },
-                  child: ZakahCard(
-                    text:  "Information about zakat".tr,
-                    icon: Icon(
-                      Icons.info_outline,
-                      size: 30,
-                      color: ColorManager.black,
-                    ),
-                  ),
+                      icon: Icon(Icons.arrow_back_outlined,
+                        color: ColorManager.iconColor,)),
                 ),
+                SizedBox(width: WidthSized.w20,),
+                CenterSideText(
+                  text: "zakat".tr,
+                  fontS:  FontSized.s18,
+                  fontW:  FontWeightManager.semiBold,)
               ],
             ),
-            SizedBox(height: HeightSized.h8),
+            SizedBox(
+              height: HeightSized.h6,
+            ),
+            ZakatCard(
+                text: "calZakat".tr, icon: Icons.calculate_outlined, onTap: (){
+              Get.to(CalculateZakah());
+            }),
+            ZakatCard(
+                text: "infZakat".tr, icon: Icons.info_outline, onTap: (){
+              Get.to(const ZakahInfoScreen());
+            })
+
           ],
         ),
       ),
